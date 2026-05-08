@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Merge Konflict | DJ &amp; Producer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "lighter-gray": "#f2ebe9",
+                        "on-surface": "#201a18",
+                        warning: "#FCB900",
+                        secondary: "#0061a6",
+                        "primary-fixed-dim": "#ffb4a5",
+                        "on-primary-container": "#fffbff",
+                        "on-primary-fixed": "#3f0400",
+                        "inverse-on-surface": "#fbeeea",
+                        "surface-tint": "#ba1c00",
+                        "on-tertiary-container": "#fffbff",
+                        "primary-fixed": "#ffdad3",
+                        "secondary-fixed-dim": "#a0c9ff",
+                        "on-primary": "#ffffff",
+                        "warm-orange": "#F56E28",
+                        gold: "#F6BF54",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7c2e00",
+                        "on-background": "#201a18",
+                        "medium-dark": "#333333",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#ffb4a5",
+                        error: "#ba1a1a",
+                        "secondary-container": "#69affe",
+                        primary: "#b61b00",
+                        "outline-variant": "#e5beb6",
+                        "barely-gray": "#eee5e3",
+                        "on-surface-variant": "#5c403a",
+                        "soft-purple": "#BBAACC",
+                        "surface-container-high": "#f2e5e2",
+                        outline: "#906f69",
+                        "surface-variant": "#ede0dc",
+                        "ocean-blue": "#1E73BE",
+                        "on-secondary-container": "#004173",
+                        "brand-white": "#FAF4F3",
+                        "inverse-surface": "#362f2d",
+                        "on-tertiary": "#ffffff",
+                        background: "#FAF4F3",
+                        "primary-container": "#db3417",
+                        "on-primary-fixed-variant": "#8e1300",
+                        success: "#008000",
+                        "light-gray": "#f6f0ef",
+                        "surface-container": "#f8ebe7",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-tertiary-fixed": "#360f00",
+                        "secondary-fixed": "#d2e4ff",
+                        "pure-black": "#000000",
+                        "on-secondary": "#ffffff",
+                        surface: "#FAF4F3",
+                        "bold-red": "#E1381B",
+                        "brand-black": "#191716",
+                        "surface-container-highest": "#ede0dc",
+                        "tertiary-fixed": "#ffdbcd",
+                        "surface-bright": "#FAF4F3",
+                        tertiary: "#9f3c00",
+                        "dark-gray": "#222222",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#fef1ed",
+                        "on-secondary-fixed-variant": "#00497f",
+                        "surface-container-lowest": "#ffffff",
+                        "text-muted": "#ABB8C3",
+                        "surface-dim": "#e4d7d4",
+                        cream: "#F5E7D0",
+                        "error-dark": "#CF2E2E",
+                        "off-white": "#F9F9F9",
+                        "on-secondary-fixed": "#001c37",
+                        "tertiary-container": "#c74e00"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        medium: "20px",
+                        "hero-pad": "116px",
+                        large: "36px",
+                        xlarge: "36px",
+                        base: "4px",
+                        generous: "24px",
+                        micro: "4px",
+                        tight: "8px",
+                        small: "12px",
+                        section: "64px",
+                        "container-max": "1200px",
+                        rhythm: "44px",
+                        "break": "72px",
+                        "base-unit": "16px"
+                    },
+                    fontFamily: {
+                        "heading-3": ["Inter"],
+                        button: ["Inter"],
+                        input: ["Arial"],
+                        "body-main": ["Inter"],
+                        "heading-2": ["Inter"],
+                        caption: ["Inter"],
+                        "body-small": ["Inter"],
+                        "heading-1": ["Inter"],
+                        label: ["Inter"],
+                        "display-hero": ["Inter"]
+                    },
+                    fontSize: {
+                        "heading-3": ["16px", {lineHeight: "24px", letterSpacing: "0px", fontWeight: "600"}],
+                        button: ["12.6px", {lineHeight: "15.12px", letterSpacing: "0.5px", fontWeight: "600"}],
+                        input: ["13.33px", {lineHeight: "normal", letterSpacing: "0px", fontWeight: "400"}],
+                        "body-main": ["12.6px", {lineHeight: "21.6px", letterSpacing: "0.3px", fontWeight: "400"}],
+                        "heading-2": ["20px", {lineHeight: "32px", letterSpacing: "-0.3px", fontWeight: "700"}],
+                        caption: ["10px", {lineHeight: "16px", letterSpacing: "0.2px", fontWeight: "400"}],
+                        "body-small": ["11px", {lineHeight: "18px", letterSpacing: "0.2px", fontWeight: "400"}],
+                        "heading-1": ["25.2px", {lineHeight: "108px", letterSpacing: "-0.5px", fontWeight: "700"}],
+                        label: ["12px", {lineHeight: "21.6px", letterSpacing: "0.3px", fontWeight: "500"}],
+                        "display-hero": ["185.4px", {lineHeight: "162px", letterSpacing: "-1.5px", fontWeight: "900"}]
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        @keyframes bobbing {
+            0%, 100% { transform: translate(-50%, 0); }
+            50% { transform: translate(-50%, 10px); }
+        }
+        .animate-bob {
+            animation: bobbing 2s ease-in-out infinite;
+        }
+    </style>
+<style>
+    ::placeholder { color: #A4918E !important; opacity: 1; }
+    .text-text-muted { color: #A4918E !important; }
+</style></head>
+<body class="bg-brand-white antialiased selection:bg-bold-red selection:text-brand-white text-[#370E06]">
+<!-- TopNavBar -->
+<header class="dark:bg-zinc-950/90 backdrop-blur-md full-width top-0 sticky z-50 border-b border-zinc-100 dark:border-zinc-800 flat no shadows text-zinc-900 dark:text-zinc-400 hover:text-red-600 transition-colors bg-[#FAF4F3]/90">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center px-6 py-4 w-full">
+<div class="text-2xl font-black dark:text-white tracking-widest font-['Inter']" style="color: #370E06;">
+            Merge Konflict
+        </div>
+<nav class="hidden md:flex gap-8 font-['Inter'] font-bold tracking-tighter uppercase text-sm">
+<a class="dark:text-zinc-400 hover:text-red-600 dark:hover:text-red-400 transition-all duration-300" href="#shows" style="color: #370E06;">Shows</a>
+<a class="dark:text-zinc-400 hover:text-red-600 dark:hover:text-red-400 transition-all duration-300" href="#mixes" style="color: #370E06;">Mixes</a>
+<a class="dark:text-zinc-400 hover:text-red-600 dark:hover:text-red-400 transition-all duration-300" href="#about" style="color: #370E06;">About</a>
+<a class="dark:text-zinc-400 hover:text-red-600 dark:hover:text-red-400 transition-all duration-300" href="#contact" style="color: #370E06;">Contact</a>
+</nav>
+<button class="bg-bold-red text-brand-white font-button text-button px-[18px] py-[10.8px] rounded border-2 border-bold-red hover:bg-brand-white hover:text-bold-red transition-colors hidden md:block" style="background-color: #E1381A; border-color: #E1381A;">
+            Book Now
+        </button>
+<button class="md:hidden text-brand-black">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-screen min-h-[600px] flex flex-col items-center justify-center text-center">
+<img alt="DJ performing live" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1uJtggKZ-119nW6GBDVMNY-H22sVwcZw9vSkTGRVnQDhk3sjZSGhTP5uk0UqVRqeoLIoQdHzF6KsHe9XcLN9crBZ9qE8WPLDfsdKzYf-NrFjfmWRbE1_Bd__I3PCjroEZr5q92Jyktg_RorzAipebSxCHEc615ZqigZYrZJFBaSEPeb3BT3EJsVusjXQXApO7Ixi5YGMyu3Qjaf3E2uFLVz2f3IR9nyfjmIeg_GmwP0SZj2CHDqBzz7pqjq1a7odo5pxg32G9PA"/>
+<div class="absolute inset-0 opacity-80" style="background-color: #191716; opacity: 0.5;"></div>
+<h1 class="relative z-10 font-display-hero text-[min(15vw,185.4px)] md:text-display-hero text-brand-white uppercase break-words w-full leading-[0.85] tracking-tighter px-generous" style="color: #FAF4F3;">
+            MERGE<br/>KONFLICT
+        </h1>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bob cursor-pointer">
+<a class="text-brand-white/60 hover:text-brand-white transition-colors" href="#shows">
+<span class="material-symbols-outlined text-5xl">keyboard_double_arrow_down</span>
+</a>
+</div>
+</section>
+<!-- Upcoming Shows - Updated to light background #FAF4F3 -->
+<section class="w-full" id="shows" style="background-color: #FAF4F3;">
+<div class="max-w-container-max mx-auto px-generous py-[192px]">
+<div class="flex justify-between items-end mb-12 border-barely-gray">
+<h2 class="font-heading-1 text-heading-1 uppercase" style="color: #370E06;">Upcoming Shows</h2>
+<a class="font-body-main text-body-main text-bold-red hover:underline" href="#"><br/></a>
+</div>
+<div class="flex flex-col gap-0 border-barely-gray">
+<!-- Show Row -->
+<a class="flex flex-col md:flex-row justify-between items-start md:items-center py-6 border-b border-barely-gray hover:bg-lighter-gray transition-colors px-4 group" href="#">
+<div class="flex flex-col md:flex-row gap-2 md:gap-12 w-full md:w-auto">
+<span class="font-heading-3 text-heading-3 w-32" style="color: #370E06;">OCT 14</span>
+<span class="font-heading-2 text-heading-2 w-48 underline" style="color: #E1381A;">piranet.radio</span>
+<span class="font-body-main text-body-main mt-1 md:mt-0" style="color: #A4918E;">6-8pm EST</span>
+</div>
+<span class="material-symbols-outlined text-bold-red opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+<!-- Show Row -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center py-6 border-b border-barely-gray hover:bg-lighter-gray transition-colors px-4 group">
+<div class="flex flex-col md:flex-row gap-2 md:gap-12 w-full md:w-auto">
+<span class="font-heading-3 text-heading-3 w-32" style="color: #370E06;">OCT 21</span>
+<span class="font-heading-2 text-heading-2 w-48 underline" style="color: #E1381A;">dnbradio.com</span>
+<span class="font-body-main text-body-main mt-1 md:mt-0" style="color: #A4918E;">8-10pm EST</span>
+</div>
+<span class="material-symbols-outlined text-bold-red opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+<!-- Show Row -->
+<a class="flex flex-col md:flex-row justify-between items-start md:items-center py-6 border-b border-barely-gray hover:bg-lighter-gray transition-colors px-4 group" href="#">
+<div class="flex flex-col md:flex-row gap-2 md:gap-12 w-full md:w-auto">
+<span class="font-heading-3 text-heading-3 w-32" style="color: #370E06;">OCT 21</span>
+<span class="font-heading-2 text-heading-2 w-48 underline" style="color: #E1381A;">theundergroundlair</span>
+<span class="font-body-main text-body-main mt-1 md:mt-0" style="color: #A4918E;">10-12pm EST</span>
+</div>
+<span class="material-symbols-outlined text-bold-red opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+<!-- Show Row -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center py-6 border-b border-barely-gray hover:bg-lighter-gray transition-colors px-4 group">
+<div class="flex flex-col md:flex-row gap-2 md:gap-12 w-full md:w-auto">
+<span class="font-heading-3 text-heading-3 w-32" style="color: #370E06;">NOV 18</span>
+<span class="font-heading-2 text-heading-2 w-48 underline" style="color: #E1381A;">twitch</span>
+<span class="font-body-main text-body-main mt-1 md:mt-0" style="color: #A4918E;">12-2am EST</span>
+</div>
+</div>
+<!-- Show Row -->
+<a class="flex flex-col md:flex-row justify-between items-start md:items-center py-6 border-b border-barely-gray hover:bg-lighter-gray transition-colors px-4 group" href="#">
+<div class="flex flex-col md:flex-row gap-2 md:gap-12 w-full md:w-auto">
+<span class="font-heading-3 text-heading-3 w-32" style="color: #370E06;">NOV 05</span>
+<span class="font-heading-2 text-heading-2 w-48 underline" style="color: #E1381A;">piranet.radio</span>
+<span class="font-body-main text-body-main mt-1 md:mt-0" style="color: #A4918E;">2-4am EST</span>
+</div>
+<span class="material-symbols-outlined text-bold-red opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Latest Mixes - Updated to grey background #E9E3E2 -->
+<section class="w-full" id="mixes" style="background-color: #F2EEEE;">
+<div class="max-w-container-max mx-auto px-generous py-[192px]">
+<h2 class="font-heading-1 text-heading-1 uppercase mb-12 border-barely-gray" style="color: #370E06;">Latest Mixes</h2>
+<div class="flex flex-col gap-6 max-w-4xl mx-auto">
+<!-- Mix Player -->
+<div class="bg-brand-white border border-barely-gray rounded p-generous shadow-[0_2px_8px_rgba(25,23,22,0.06)] hover:shadow-[0_8px_24px_rgba(25,23,22,0.12)] hover:-translate-y-0.5 transition-all duration-300 flex flex-col md:flex-row gap-6 items-center">
+<button class="w-16 h-16 shrink-0 bg-bold-red rounded-full flex items-center justify-center text-brand-white relative z-10 hover:scale-105 transition-transform shadow-lg" style="background-color: #E1381A;">
+<span class="material-symbols-outlined text-3xl" data-icon="play_arrow" style='font-variation-settings: "FILL" 1;'>play_arrow</span>
+</button>
+<div class="flex-1 w-full">
+<div class="flex flex-col md:flex-row justify-between md:items-end mb-4">
+<h3 class="font-heading-2 text-heading-2 uppercase tracking-tight" style="color: #370E06;">Berghain Klubnacht Set</h3>
+<p class="font-body-small text-body-small mt-1 md:mt-0 font-bold uppercase tracking-widest" style="color: #A4918E;">Recorded Live</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label text-label min-w-[48px]" style="color: #370E06;">00:00</span>
+<div class="flex-1 h-2 bg-lighter-gray rounded-full overflow-hidden cursor-pointer">
+<div class="h-full bg-bold-red w-1/4" style="background-color: #E1381A;"></div>
+</div>
+<span class="font-label text-label min-w-[48px] text-right" style="color: #370E06;">134:00</span>
+</div>
+</div>
+</div>
+<!-- Mix Player -->
+<div class="bg-brand-white border border-barely-gray rounded p-generous shadow-[0_2px_8px_rgba(25,23,22,0.06)] hover:shadow-[0_8px_24px_rgba(25,23,22,0.12)] hover:-translate-y-0.5 transition-all duration-300 flex flex-col md:flex-row gap-6 items-center">
+<button class="w-16 h-16 shrink-0 bg-bold-red rounded-full flex items-center justify-center text-brand-white relative z-10 hover:scale-105 transition-transform shadow-lg" style="background-color: #E1381A;">
+<span class="material-symbols-outlined text-3xl" data-icon="play_arrow" style='font-variation-settings: "FILL" 1;'>play_arrow</span>
+</button>
+<div class="flex-1 w-full">
+<div class="flex flex-col md:flex-row justify-between md:items-end mb-4">
+<h3 class="font-heading-2 text-heading-2 uppercase tracking-tight" style="color: #370E06;">Studio Sessions Vol. 4</h3>
+<p class="font-body-small text-body-small mt-1 md:mt-0 font-bold uppercase tracking-widest" style="color: #A4918E;">Studio Mix</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label text-label min-w-[48px]" style="color: #370E06;">00:00</span>
+<div class="flex-1 h-2 bg-lighter-gray rounded-full overflow-hidden cursor-pointer">
+<div class="h-full bg-bold-red w-1/2" style="background-color: #E1381A;"></div>
+</div>
+<span class="font-label text-label min-w-[48px] text-right" style="color: #370E06;">60:00</span>
+</div>
+</div>
+</div>
+<!-- Mix Player -->
+<div class="bg-brand-white border border-barely-gray rounded p-generous shadow-[0_2px_8px_rgba(25,23,22,0.06)] hover:shadow-[0_8px_24px_rgba(25,23,22,0.12)] hover:-translate-y-0.5 transition-all duration-300 flex flex-col md:flex-row gap-6 items-center">
+<button class="w-16 h-16 shrink-0 bg-bold-red rounded-full flex items-center justify-center text-brand-white relative z-10 hover:scale-105 transition-transform shadow-lg" style="background-color: #E1381A;">
+<span class="material-symbols-outlined text-3xl" data-icon="play_arrow" style='font-variation-settings: "FILL" 1;'>play_arrow</span>
+</button>
+<div class="flex-1 w-full">
+<div class="flex flex-col md:flex-row justify-between md:items-end mb-4">
+<h3 class="font-heading-2 text-heading-2 uppercase tracking-tight" style="color: #370E06;">Industrial Complex Mix</h3>
+<p class="font-body-small text-body-small mt-1 md:mt-0 font-bold uppercase tracking-widest" style="color: #A4918E;">Podcast</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label text-label min-w-[48px]" style="color: #370E06;">00:00</span>
+<div class="flex-1 h-2 bg-lighter-gray rounded-full overflow-hidden cursor-pointer">
+<div class="h-full bg-bold-red w-1/3" style="background-color: #E1381A;"></div>
+</div>
+<span class="font-label text-label min-w-[48px] text-right" style="color: #370E06;">90:00</span>
+</div>
+</div>
+</div>
+<div class="flex mt-6 justify-center">
+<a class="font-['Inter'] text-[12px] font-bold uppercase tracking-widest hover:underline transition-all underline" href="#" style="color: #E1381A;">
+        View All
+    </a>
+</div></div>
+</div>
+</section>
+<!-- About Section - Updated to light background #FAF4F3 -->
+<section class="w-full" id="about" style="background-color: #FAF4F3;">
+<div class="max-w-container-max mx-auto px-generous py-[192px]">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 h-[600px] bg-lighter-gray rounded overflow-hidden relative">
+<img alt="Professional black and white photograph of Merge Konflict performing live in a dark, atmospheric club." class="w-full h-full object-cover filter grayscale contrast-125" data-alt="A professional, high-contrast, black and white photograph of a techno DJ performing live in a dark, atmospheric club." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO6a0QPyIYgcRYjMJymr9Kxq14K_AgiOwDELB4HsaBr68iywbulIcSvrb8_PyphByZ2a0j-wVL71HsScm-bl0q-8wP_MHBWxZyjnDyaVyYr-n1k__2fIzJDbR7BcbaqAaXh8C115QfNH-pCTJkceQAyjlsegndrMEclU4NzJVsaE-awRX8u38DFYJqDfg_dJXT_9A-6ke5GXKFvmWOwll8S975fuUgjpCXJScP8iCdpd9HinaLzsN8FEDNRnrOM6zSRbnu6Tozcg"/>
+</div>
+<div class="md:col-span-7">
+<h2 class="font-heading-1 text-heading-1 uppercase mb-8" style="color: #370E06;">About Merge</h2>
+<p class="font-body-main text-body-main mb-6 max-w-2xl leading-relaxed" style="color: #370E06;">
+                        Emerging from the depths of the underground techno scene, Merge Konflict is the sonic alias of a producer obsessed with the tension between mechanical precision and human emotion. Characterized by relentless low-end frequencies, industrial textures, and hypnotic rhythms, the Merge Konflict sound is designed for expansive warehouses and intimate dark rooms alike.
+                    </p>
+<p class="font-body-main text-body-main max-w-2xl leading-relaxed" style="color: #370E06;">
+                        With releases on seminal labels and a touring schedule that spans the globe, the project continues to evolve, pushing the boundaries of contemporary electronic music while remaining fiercely loyal to its raw, unpolished roots.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Media - Updated to grey background #E9E3E2 -->
+<section class="w-full" style="background-color: #F2EEEE;">
+<div class="max-w-container-max mx-auto px-generous flex flex-col items-center py-[192px]">
+<h3 class="font-heading-3 text-heading-3 uppercase tracking-widest mb-8" style="color: #A4918E;">Connect</h3>
+<div class="flex gap-6">
+<a class="w-12 h-12 rounded-full flex items-center justify-center text-brand-black hover:bg-bold-red hover:text-brand-white transition-colors" href="#" style="background-color: #E1381A;">
+<span class="material-symbols-outlined text-white" data-icon="photo_camera">photo_camera</span>
+</a>
+<a class="w-12 h-12 rounded-full flex items-center justify-center text-brand-black hover:bg-bold-red hover:text-brand-white transition-colors" href="#" style="background-color: #E1381A;">
+<span class="material-symbols-outlined text-white" data-icon="facebook">social_leaderboard</span>
+</a>
+<a class="w-12 h-12 rounded-full flex items-center justify-center text-brand-black hover:bg-bold-red hover:text-brand-white transition-colors" href="#" style="background-color: #E1381A;">
+<span class="material-symbols-outlined text-white" data-icon="graphic_eq">graphic_eq</span>
+</a>
+<a class="w-12 h-12 rounded-full flex items-center justify-center text-brand-black hover:bg-bold-red hover:text-brand-white transition-colors" href="#" style="background-color: #E1381A;">
+<span class="material-symbols-outlined text-white" data-icon="album">album</span>
+</a>
+<a class="w-12 h-12 rounded-full flex items-center justify-center text-brand-black hover:bg-bold-red hover:text-brand-white transition-colors" href="#" style="background-color: #E1381A;">
+<span class="material-symbols-outlined text-white" data-icon="play_circle">play_circle</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Contact Form - Tinted Background -->
+<section class="bg-brand-white w-full" id="contact">
+<div class="max-w-[800px] mx-auto px-generous pt-[192px] pb-[216px]">
+<h2 class="font-heading-1 text-heading-1 uppercase mb-12 text-center" style="color: #370E06;">contact</h2>
+<form class="flex flex-col gap-small">
+<div class="flex flex-col gap-2">
+<label class="font-label text-label" for="name" style="color: #370E06;">Name</label>
+<input class="font-input text-input bg-brand-white border border-barely-gray rounded-[4.5px] p-3 focus:outline-none focus:border-bold-red focus:ring-2 focus:ring-bold-red/20 transition-all placeholder:text-text-muted" id="name" placeholder="Your Name" style="color: #370E06;" type="text"/>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<label class="font-label text-label" for="email" style="color: #370E06;">Email</label>
+<input class="font-input text-input bg-brand-white border border-barely-gray rounded-[4.5px] p-3 focus:outline-none focus:border-bold-red focus:ring-2 focus:ring-bold-red/20 transition-all placeholder:text-text-muted" id="email" placeholder="your@email.com" style="color: #370E06;" type="email"/>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<label class="font-label text-label" for="message" style="color: #370E06;">Message</label>
+<textarea class="font-input text-input bg-brand-white border border-barely-gray rounded-[4.5px] p-3 focus:outline-none focus:border-bold-red focus:ring-2 focus:ring-bold-red/20 transition-all placeholder:text-text-muted resize-none" id="message" placeholder="Booking details..." rows="5" style="color: #370E06;"></textarea>
+</div>
+<button class="mt-8 font-button text-button bg-bold-red text-brand-white border-2 border-bold-red px-[18px] py-[10.8px] rounded hover:bg-brand-white hover:text-bold-red transition-colors self-start min-h-[36.7px]" style="background-color: #E1381A; border-color: #E1381A;" type="submit">
+                    Send Message
+                </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width border-t border-zinc-800 flat font-['Inter'] text-sm tracking-normal text-zinc-400 p-4" style="background-color: #191716;">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center px-6 gap-8">
+<div class="text-lg font-bold text-white">Merge Konflict</div>
+<div class="text-zinc-400">© 2026 Merge Konflict. Design and developed: Christopher Harley</div>
+<div class="flex gap-6">
+<a class="text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors focus:ring-2 focus:ring-red-600 focus:outline-none" href="#"><br/></a>
+<a class="text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors focus:ring-2 focus:ring-red-600 focus:outline-none" href="#"><br/></a>
+</div>
+</div>
+</footer>
+</body></html>

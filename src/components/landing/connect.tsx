@@ -7,15 +7,15 @@ interface ConnectProps {
 
 export const Connect: React.FC<ConnectProps> = ({ className = '' }) => {
   return (
-    <section className={`w-full bg-[#F2EEEE] ${className}`}>
+    <section className={`w-full bg-muted ${className}`}>
       <div className="max-w-container-max mx-auto px-6 flex flex-col items-center py-[192px]">
-        <h3 className="text-[16px] font-semibold uppercase tracking-widest mb-8 text-text-muted">Connect</h3>
+        <h3 className="text-[16px] font-semibold uppercase tracking-widest mb-8 text-muted-foreground">Connect</h3>
         <div className="flex gap-6">
           {socialLinks.map((link, index) => (
             <a
               key={index}
               href={link.href}
-              className="w-12 h-12 rounded-full flex items-center justify-center bg-bold-red text-white hover:bg-brand-white hover:text-bold-red transition-colors border-2 border-bold-red"
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-primary text-primary-foreground hover:bg-background hover:text-primary transition-colors border-2 border-primary"
             >
               <span className="material-symbols-outlined text-xl">{link.icon}</span>
             </a>

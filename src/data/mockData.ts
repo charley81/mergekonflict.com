@@ -1,17 +1,43 @@
 export const navLinks = [
+  { name: 'Home', href: '#' },
   { name: 'Shows', href: '#shows' },
   { name: 'Mixes', href: '#mixes' },
   { name: 'About', href: '#about' },
   { name: 'Contact', href: '#contact' },
-];
+]
 
 export const shows = [
-  { date: 'OCT 14', venue: 'piranet.radio', time: '6-8pm EST', href: '#' },
-  { date: 'OCT 21', venue: 'dnbradio.com', time: '8-10pm EST' },
-  { date: 'OCT 21', venue: 'theundergroundlair', time: '10-12pm EST', href: '#' },
-  { date: 'NOV 18', venue: 'twitch', time: '12-2am EST' },
-  { date: 'NOV 05', venue: 'piranet.radio', time: '2-4am EST', href: '#' },
-];
+  {
+    date: 'OCT 14',
+    venue: 'piranet.radio',
+    time: '6-8pm EST',
+    url: 'https://piranet.radio',
+  },
+  {
+    date: 'OCT 21',
+    venue: 'piranet.radio',
+    time: '8-10pm EST',
+    url: 'https://piranet.radio',
+  },
+  {
+    date: 'OCT 21',
+    venue: 'piranet.radio',
+    time: '10-12pm EST',
+    url: 'https://piranet.radio',
+  },
+  {
+    date: 'NOV 18',
+    venue: 'piranet.radio',
+    time: '12-2am EST',
+    url: 'https://piranet.radio',
+  },
+  {
+    date: 'NOV 05',
+    venue: 'piranet.radio',
+    time: '2-4am EST',
+    url: 'https://piranet.radio',
+  },
+]
 
 export const mixes = [
   {
@@ -32,7 +58,7 @@ export const mixes = [
     duration: '90:00',
     progress: 33,
   },
-];
+]
 
 export const socialLinks = [
   { icon: 'photo_camera', href: '#' },
@@ -40,7 +66,7 @@ export const socialLinks = [
   { icon: 'graphic_eq', href: '#' },
   { icon: 'album', href: '#' },
   { icon: 'play_circle', href: '#' },
-];
+]
 
 export const aboutData = {
   title: 'About Merge',
@@ -52,4 +78,4 @@ export const aboutData = {
     src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDO6a0QPyIYgcRYjMJymr9Kxq14K_AgiOwDELB4HsaBr68iywbulIcSvrb8_PyphByZ2a0j-wVL71HsScm-bl0q-8wP_MHBWxZyjnDyaVyYr-n1k__2fIzJDbR7BcbaqAaXh8C115QfNH-pCTJkceQAyjlsegndrMEclU4NzJVsaE-awRX8u38DFYJqDfg_dJXT_9A-6ke5GXKFvmWOwll8S975fuUgjpCXJScP8iCdpd9HinaLzsN8FEDNRnrOM6zSRbnu6Tozcg',
     alt: 'A professional, high-contrast, black and white photograph of a techno DJ performing live in a dark, atmospheric club.',
   },
-};
+}
