@@ -1,0 +1,68 @@
+description = "Create branch for feature, document, implement, test, build, commit, and push."
+
+prompt = """
+You MUST follow this workflow in exact order for every feature implementation. Do not skip steps. Do not rearrange steps. If any step fails, iterate and fix before proceeding.
+
+## Feature Workflow
+
+### 0. BRANCH
+- Read the feature spec file provided (e.g., @context/features/<feature-name>.md)  
+- Extract the branch name from the spec. The spec should contain a field like `**Branch:** <type>/<short-description>` (e.g., `feature/hero-section`).  
+  - If the spec does not contain a branch name, derive one from the feature title using the convention: `<type>/<kebab-case-description>`. Types: `feature`, `fix`, `chore`, `refactor`, `docs`, `test`.  
+- Check if the branch already exists locally: `git branch --list <branch-name>`
+  - If it exists, switch to it: `git checkout <branch-name>`
+  - If it does not exist, create and switch: `git checkout -b <branch-name>`
+- Report the branch you are now on before proceeding.
+
+### 1. DOCUMENT
+- Read @context/current-feature.md
+- If the file is empty or contains a different feature, replace its contents with the current feature name, status (in progress), goals, and notes
+- If it already has this feature, update status to "in progress"
+
+### 2. IMPLEMENT
+- Read the feature spec file provided (e.g., @context/features/<feature-name>.md)
+- Implement every requirement in the spec exactly as specified
+- Use shadcn/ui components for ALL UI elements — never use raw HTML form elements when a shadcn component exists
+- Write mobile-first CSS. Start all responsive design at 375px width, then add breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
+- Follow all file paths and code patterns exactly as documented
+
+### 3. CODE SCAN
+- Invoke the code-scanner subagent on all changed files: "@code-scanner review all uncommitted changes for type errors, unused imports, accessibility issues, and spec compliance"
+- Fix any issues the code-scanner reports
+- If no issues, proceed to step 4
+
+### 4. TEST
+- Run `npm run test`
+- Fix any failing tests before proceeding
+- If no tests exist yet for this feature, note it and proceed
+
+### 5. BUILD
+- Run `npm run build`
+- Fix ALL build errors and warnings before proceeding
+- If build fails after 3 iterations, STOP and report the specific errors. Do not continue.
+- If build passes, proceed to step 6
+
+### 6. COMMIT & PUSH
+- Only after build passes and all tests pass
+- Stage all changed files: `git add .`
+- Commit with a conventional commit message: `<type>(<scope>): <description>`
+  - type: feat (feature), fix (bug fix), chore (tooling), refactor, docs, test
+  - scope: the feature name (e.g., hero-section, contact-form, theme-system)
+  - description: brief imperative summary
+- Push the branch to remote: `git push origin <current-branch>`
+- DO NOT merge to main — the PR will be reviewed separately
+
+### 7. UPDATE DOCUMENTATION
+- Update @context/current-feature.md: set status to "completed"
+- Add entry to history section with date and brief summary
+- Report final summary to the user
+
+## Important Rules
+- NEVER skip testing or building. Both are mandatory.
+- NEVER merge to main. Only push the branch for PR review.
+- After 3 failed build attempts, stop and report errors.
+- Use conventional commits: feat(scope), fix(scope), chore(scope)
+- Always update @context/current-feature.md at start and end of workflow
+- Before any implementation, scan changed files with the code-scanner agent
+- Create the feature branch before starting work; if the branch already exists, just switch to it
+"""
