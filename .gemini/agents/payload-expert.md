@@ -4,7 +4,7 @@ description: Expert in Payload CMS 3.0 with Postgres adapter, Neon integration, 
 tools:
   - read_file
   - write_file
-  - edit_file
+  - replace
   - grep_search
   - glob
   - list_directory

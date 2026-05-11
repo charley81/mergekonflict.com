@@ -1,0 +1,158 @@
+[    2398ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[    2471ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[    3072ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[    3810ms] [LOG] [Fast Refresh] done in 927ms @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[    7055ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[    7078ms] [LOG] [Fast Refresh] done in 124ms @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[   96103ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[   96765ms] [LOG] [Fast Refresh] done in 120ms @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  110817ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  112233ms] [LOG] [Fast Refresh] done in 1515ms @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  112650ms] [LOG] %c%s%c Generating import map background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  112675ms] [LOG] %c%s%c No new imports found, skipping writing import map background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  113964ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  114013ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  116385ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  116767ms] [LOG] [Fast Refresh] done in 482ms @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  128630ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  128654ms] [LOG] [Fast Refresh] done in 124ms @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  186079ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  186745ms] [LOG] [Fast Refresh] done in 69ms @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  187061ms] [LOG] %c%s%c Generating import map background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  187196ms] [LOG] %c%s%c No new imports found, skipping writing import map background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  516885ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  518216ms] [ERROR] ./src/app/(payload)/layout.tsx:6:1
+Module not found: Can't resolve '@payloadcms/richtext-lexical/css'
+  4 | import { importMap } from './admin/importMap'
+  5 | import '@payloadcms/next/css'
+> 6 | import '@payloadcms/richtext-lexical/css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import './custom.css'
+  8 | import type { ServerFunctionClient } from 'payload'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:3272
+[  518358ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  518601ms] [ERROR] ./src/app/(payload)/layout.tsx:6:1
+Module not found: Can't resolve '@payloadcms/richtext-lexical/css'
+  4 | import { importMap } from './admin/importMap'
+  5 | import '@payloadcms/next/css'
+> 6 | import '@payloadcms/richtext-lexical/css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import './custom.css'
+  8 | import type { ServerFunctionClient } from 'payload'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:3272
+[  518656ms] [ERROR] ./src/app/(payload)/layout.tsx:6:1
+Module not found: Can't resolve '@payloadcms/richtext-lexical/css'
+  4 | import { importMap } from './admin/importMap'
+  5 | import '@payloadcms/next/css'
+> 6 | import '@payloadcms/richtext-lexical/css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import './custom.css'
+  8 | import type { ServerFunctionClient } from 'payload'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:3272
+[  518757ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  519065ms] [ERROR] ./src/app/(payload)/layout.tsx:6:1
+Module not found: Can't resolve '@payloadcms/richtext-lexical/css'
+  4 | import { importMap } from './admin/importMap'
+  5 | import '@payloadcms/next/css'
+> 6 | import '@payloadcms/richtext-lexical/css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import './custom.css'
+  8 | import type { ServerFunctionClient } from 'payload'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:3272
+[  519073ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/admin/login:0
+[  519429ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/0p2h_react-dom_0vsf22y._.js:15305
+[  519594ms] Error: ./src/app/(payload)/layout.tsx:6:1
+Module not found: Can't resolve '@payloadcms/richtext-lexical/css'
+  4 | import { importMap } from './admin/importMap'
+  5 | import '@payloadcms/next/css'
+> 6 | import '@payloadcms/richtext-lexical/css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import './custom.css'
+  8 | import type { ServerFunctionClient } from 'payload'
+  9 |
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/app/(payload)/layout.tsx:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at Object.getCompilationErrors (file:///Users/chrisharley/Desktop/mergekonflict.com/node_modules/.pnpm/next@16.2.4_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.4_react@19.2.4__react@19.2.4_sass@1.77.4/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file:///Users/chrisharley/Desktop/mergekonflict.com/node_modules/.pnpm/next@16.2.4_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.4_react@19.2.4__react@19.2.4_sass@1.77.4/node_modules/next/dist/server/lib/dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file:///Users/chrisharley/Desktop/mergekonflict.com/node_modules/.pnpm/next@16.2.4_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.4_react@19.2.4__react@19.2.4_sass@1.77.4/node_modules/next/dist/server/dev/next-dev-server.js:719:42)
+    at DevServer.findPageComponents (file:///Users/chrisharley/Desktop/mergekonflict.com/node_modules/.pnpm/next@16.2.4_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.4_react@19.2.4__react@19.2.4_sass@1.77.4/node_modules/next/dist/server/dev/next-dev-server.js:689:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/chrisharley/Desktop/mergekonflict.com/node_modules/.pnpm/next@16.2.4_@babel+core@7.29.0_babel-plugin-react-compiler@1.0.0_react-dom@19.2.4_react@19.2.4__react@19.2.4_sass@1.77.4/node_modules/next/dist/server/base-server.js:1745:26)
+[  519609ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/0tns_next_dist_03zt~2i._.js:1226
+[  519618ms] [ERROR] ./src/app/(payload)/layout.tsx:6:1
+Module not found: Can't resolve '@payloadcms/richtext-lexical/css'
+  4 | import { importMap } from './admin/importMap'
+  5 | import '@payloadcms/next/css'
+> 6 | import '@payloadcms/richtext-lexical/css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import './custom.css'
+  8 | import type { ServerFunctionClient } from 'payload'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/0tns_next_dist_03zt~2i._.js:1945
+[  519705ms] [ERROR] ./src/app/(payload)/layout.tsx:6:1
+Module not found: Can't resolve '@payloadcms/richtext-lexical/css'
+  4 | import { importMap } from './admin/importMap'
+  5 | import '@payloadcms/next/css'
+> 6 | import '@payloadcms/richtext-lexical/css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import './custom.css'
+  8 | import type { ServerFunctionClient } from 'payload'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/0tns_next_dist_03zt~2i._.js:1945
+[  519806ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_03zt~2i._.js:1226
+[  519984ms] [ERROR] ./src/app/(payload)/layout.tsx:6:1
+Module not found: Can't resolve '@payloadcms/richtext-lexical/css'
+  4 | import { importMap } from './admin/importMap'
+  5 | import '@payloadcms/next/css'
+> 6 | import '@payloadcms/richtext-lexical/css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import './custom.css'
+  8 | import type { ServerFunctionClient } from 'payload'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/0tns_next_dist_03zt~2i._.js:1945
+[  521095ms] [ERROR] ./src/app/(payload)/layout.tsx:6:1
+Module not found: Can't resolve '@payloadcms/richtext-lexical/css'
+  4 | import { importMap } from './admin/importMap'
+  5 | import '@payloadcms/next/css'
+> 6 | import '@payloadcms/richtext-lexical/css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import './custom.css'
+  8 | import type { ServerFunctionClient } from 'payload'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/0tns_next_dist_03zt~2i._.js:1945
+[  521148ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_03zt~2i._.js:1226
+[  955365ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_03zt~2i._.js:1226
+[  955464ms] [ERROR] ./src/app/(payload)/layout.tsx:6:1
+Module not found: Can't resolve '@payloadcms/richtext-lexical/css'
+  4 | import { importMap } from './admin/importMap'
+  5 | import '@payloadcms/next/css'
+> 6 | import '@payloadcms/richtext-lexical/css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import './custom.css'
+  8 | import type { ServerFunctionClient } from 'payload'
+  9 |
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/0tns_next_dist_03zt~2i._.js:1945
+[  964625ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_03zt~2i._.js:1226
+[  964700ms] [LOG] [Fast Refresh] done in 147ms @ http://localhost:3000/_next/static/chunks/0tns_next_dist_03zt~2i._.js:1226
+[  964825ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_03zt~2i._.js:1226
+[  965487ms] [LOG] [Fast Refresh] done in 762ms @ http://localhost:3000/_next/static/chunks/0tns_next_dist_03zt~2i._.js:1226
+[  966396ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  966428ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431

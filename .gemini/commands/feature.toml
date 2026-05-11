@@ -42,6 +42,11 @@ You MUST follow this workflow in exact order for every feature implementation. D
 - If build fails after 3 iterations, STOP and report the specific errors. Do not continue.
 - If build passes, proceed to step 6
 
+### 5.5. DEEP REVIEW
+- Run `/review` on all uncommitted changes
+- If the verdict is REVISE, fix the reported issues and re-run from Step 4 (TEST)
+- If PASS or PASS WITH CONCERNS, proceed to Step 6 (COMMIT & PUSH)
+
 ### 6. COMMIT & PUSH
 - Only after build passes and all tests pass
 - Stage all changed files: `git add .`

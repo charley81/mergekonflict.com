@@ -1,0 +1,57 @@
+[     339ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[     402ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  249372ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  250314ms] [ERROR] ./src/app/(payload)/layout.tsx:5:1
+Module not found: Can't resolve '@payloadcms/next/dist/prod/styles.css'
+  3 | import React from 'react'
+  4 | import { importMap } from './admin/importMap'
+> 5 | import '@payloadcms/next/dist/prod/styles.css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import './custom.css'
+  7 | import type { ServerFunctionClient } from 'payload'
+  8 |
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:3272
+[  267532ms] [ERROR] ./src/app/(payload)/layout.tsx:5:1
+Module not found: Can't resolve '@payloadcms/next/dist/prod/styles.css'
+  3 | import React from 'react'
+  4 | import { importMap } from './admin/importMap'
+> 5 | import '@payloadcms/next/dist/prod/styles.css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import './custom.css'
+  7 | import type { ServerFunctionClient } from 'payload'
+  8 |
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:3272
+[  267569ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  267892ms] [ERROR] ./src/app/(payload)/layout.tsx:5:1
+Module not found: Can't resolve '@payloadcms/next/dist/prod/styles.css'
+  3 | import React from 'react'
+  4 | import { importMap } from './admin/importMap'
+> 5 | import '@payloadcms/next/dist/prod/styles.css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import './custom.css'
+  7 | import type { ServerFunctionClient } from 'payload'
+  8 |
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:3272
+[  267960ms] [ERROR] ./src/app/(payload)/layout.tsx:5:1
+Module not found: Can't resolve '@payloadcms/next/dist/prod/styles.css'
+  3 | import React from 'react'
+  4 | import { importMap } from './admin/importMap'
+> 5 | import '@payloadcms/next/dist/prod/styles.css'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import './custom.css'
+  7 | import type { ServerFunctionClient } from 'payload'
+  8 |
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:3272
+[  267994ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  376193ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  376563ms] [LOG] [Fast Refresh] done in 425ms @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  376665ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  377285ms] [LOG] [Fast Refresh] done in 720ms @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  378292ms] [LOG] %c%s%c Generating import map background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  378459ms] [LOG] %c%s%c No new imports found, skipping writing import map background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  378764ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
+[  378805ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/0tns_next_dist_0m7rhli._.js:2431
