@@ -3,6 +3,8 @@ import { RootPage, generatePageMetadata } from '@payloadcms/next/views'
 import { importMap } from '../importMap'
 import type { Metadata } from 'next'
 
+export const dynamic = 'force-dynamic'
+
 type Args = {
   params: Promise<{
     segments?: string[]
@@ -15,7 +17,7 @@ type Args = {
 export const generateMetadata = ({ params, searchParams }: Args): Promise<Metadata> =>
   generatePageMetadata({ config, params, searchParams })
 
-const Page = async ({ params, searchParams }: Args) => {
+const Page = ({ params, searchParams }: Args) => {
   return (
     <RootPage
       config={config}
