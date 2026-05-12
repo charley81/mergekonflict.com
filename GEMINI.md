@@ -33,4 +33,4 @@ The project uses `pnpm` as the primary package manager.
 - [ ] Integrate Payload CMS
 - [ ] Setup SoundCloud API Fetching
 - [ ] Develop Sections: Hero, Shows, Mixes, About, Connect, Contact
-- [ ] Configure Vercel Deployment & Database (Neon)
+- [ ] Configure Vercel Deployment & Database (TBD)

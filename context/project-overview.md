@@ -126,8 +126,8 @@ All content will be modeled in Payload CMS. This defines the shape of the API re
 
 - **6.2. Backend & Content Management:**
   - **Payload CMS:** Installed directly within the Next.js `/app` folder for a unified application.
-  - **Database:** Neon (serverless PostgreSQL). The `POSTGRES_URL` environment variable in Vercel handles the connection.
-  - **Storage:** Vercel Blob Storage (for uploaded images, as configured in Payload's `payload.config.ts`).
+  - **Database:** TBD.
+  - **Storage:** Vercel Blob Storage.
 
 - **6.3. Music Integration:**
   - **API:** SoundCloud API.
@@ -166,8 +166,3 @@ lib/
 ├── soundcloud.ts (fetch playlist/oEmbed data)
 server-actions/
 ├── submit-contact.ts (saves to Payload)
-
-## Important
-
-- Database migration
-  - NEVER use prisma db push or directly update the database structure. ALWAYS create migrations that run in the development first, then production
