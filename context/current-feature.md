@@ -1,19 +1,19 @@
-# Current Freature
-
-<!-- feature name  -->
+# Current Feature: Sanity CMS Setup
 
 ## Status
-
-<!-- not startd | in progress | completed -->
+In Progress
 
 ## Goals
-
-<!-- goals and requirements  -->
+- Scaffold Sanity into the Next.js project.
+- Configure embedded Studio at `/studio`.
+- Define schema types: `show`, `siteSettings`, and `contactSubmission`.
+- Set up development and production datasets.
+- Configure CORS for local development.
+- Verify Studio functionality.
 
 ## Notes
-
-<!-- any extra notes  -->
+- Using `next-sanity` toolkit.
+- Following spec in `context/features/sanity-setup-spec.md`.
 
 ## History
-
-<!-- keep this updated. earliest to latest -->
+- 2026-05-13: Initialized feature branch `chore/sanity-cms-setup` and documentation.

@@ -10,16 +10,6 @@
     "next-devtools": {
       "command": "npx",
       "args": ["next-devtools-mcp"]
-    },
-    "payload": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "http://127.0.0.1:3000/api/mcp",
-        "--header",
-        "Authorization: Bearer PAYLOAD_MCP_API_KEY"
-      ]
     }
   }
 }
