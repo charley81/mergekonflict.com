@@ -1,26 +1,22 @@
-# Current Feature: Stitch Design Extraction & Full Site Build
+# Current Feature: Fix SoundCloud Player — Custom UI with Widget API
 
 ## Status
 Completed
 
 ## Goals
-- Extract design system from Stitch project `9965551158283883935` and generate `DESIGN.md`. (Done)
-- Build a single-page site layout composing all sections in `src/app/page.tsx`. (Done)
-- Implement responsive Navbar with smooth-scroll and theme toggle. (Done)
-- Create Hero section with dynamic content from Sanity and background image. (Done)
-- Build Upcoming Shows section fetching and sorting data from Sanity. (Done)
-- Implement Latest Mixes section using SoundCloud Widget API and custom controls. (Note: Using styled iframe for now, custom player deferred).
-- Build About section with Portable Text rendering from Sanity. (Done)
-- Create Connect section with social links from Sanity. (Done)
-- Implement Contact Form with shadcn pattern, `useActionState`, Zod validation, and Resend integration. (Done)
-- Ensure 100% shadcn/ui component usage and mobile-first responsive design. (Done)
+- Fix the "Invalid URL" error by correctly constructing the SoundCloud embed iframe `src`. (Done)
+- Implement a fully custom audio player UI using shadcn/ui `Button` and `Slider`. (Done)
+- Integrate the SoundCloud Widget JavaScript API for playback control and metadata. (Done)
+- Ensure loading, error, and empty states are handled correctly. (Done)
+- Maintain responsive, mobile-first design and use semantic Tailwind tokens. (Done)
 
 ## Notes
-- Integrated with Sanity CMS for all dynamic content.
-- Uses Resend for contact form email notifications.
-- Follows shadcn's latest form and server action patterns.
-- Verified all components use semantic theme colors from `globals.css`.
-- Production build passing.
+- The player uses a hidden iframe and the SoundCloud Widget API for a headless integration.
+- UI is built entirely with shadcn components (Button, Slider, Skeleton).
+- Accessibility improved with aria-labels.
+- Next.js image optimization used for track artwork.
+- **Refactoring:** Consolidated `TrackInfo` types and smoothed out slider progress.
+- **Studio Fix:** Updated `sanity.config.ts` to use the dynamic `dataset` environment variable.
 
 ## History
 - 2026-05-13: Initialized feature branch `chore/project-scaffold-ui` and updated documentation.
@@ -30,3 +26,6 @@ Completed
 - 2026-05-13: Implemented all site sections (Hero, Shows, Mixes, About, Connect, Contact) with Sanity integration.
 - 2026-05-13: Refined UI with semantic theme tokens and fixed `zod` dependency.
 - 2026-05-13: Verified build and marked feature as completed.
+- 2026-05-14: Switched to `fix/soundcloud-player-url` to fix the SoundCloud player and implement custom UI.
+- 2026-05-14: Completed custom SoundCloud player implementation with Widget API and shadcn components. Fixed build errors, improved accessibility, and synchronized Studio dataset config.
+- 2026-05-14: Refactored types and UI for final production-ready state.

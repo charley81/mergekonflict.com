@@ -3,7 +3,15 @@ import { Separator } from '@/components/ui/separator'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
-async function getShows() {
+interface Show {
+  _id: string
+  date: string
+  venue: string
+  time: string
+  url: string
+}
+
+async function getShows(): Promise<Show[]> {
   const query = `*[_type == "show" && date >= now()] | order(date asc)`
   return await client.fetch(query)
 }
@@ -22,7 +30,7 @@ export async function ShowsSection() {
           <p className="text-muted-foreground italic">No upcoming shows announced yet. Check back soon.</p>
         ) : (
           <div className="space-y-8">
-            {shows.map((show: any, index: number) => {
+            {shows.map((show, index) => {
               const date = new Date(show.date)
               const month = date.toLocaleString('default', { month: 'short' }).toUpperCase()
               const day = date.getDate()
