@@ -1,18 +1,22 @@
-# Current Feature: Sanity Data Seeding (Development Dataset)
+# Current Feature: Fix SoundCloud Player — Custom UI with Widget API
 
 ## Status
 Completed
 
 ## Goals
-- Create seed data for `show` document type with realistic upcoming DNB events. (Done)
-- Create seed data for `siteSettings` document type including Hero, About, Connect, and Footer content. (Done)
-- Import seed data into the Sanity `development` dataset. (Done)
-- Verify content is correctly populated in the local frontend. (Done - via successful build and data creation)
+- Fix the "Invalid URL" error by correctly constructing the SoundCloud embed iframe `src`. (Done)
+- Implement a fully custom audio player UI using shadcn/ui `Button` and `Slider`. (Done)
+- Integrate the SoundCloud Widget JavaScript API for playback control and metadata. (Done)
+- Ensure loading, error, and empty states are handled correctly. (Done)
+- Maintain responsive, mobile-first design and use semantic Tailwind tokens. (Done)
 
 ## Notes
-- Targeting `development` dataset only.
-- Seed data includes placeholder images and rich text for the bio.
-- Fixed several pre-existing issues found by `code-scanner` (any types, accessibility, unused imports, icon bundle size).
+- The player uses a hidden iframe and the SoundCloud Widget API for a headless integration.
+- UI is built entirely with shadcn components (Button, Slider, Skeleton).
+- Accessibility improved with aria-labels.
+- Next.js image optimization used for track artwork.
+- **Refactoring:** Consolidated `TrackInfo` types and smoothed out slider progress.
+- **Studio Fix:** Updated `sanity.config.ts` to use the dynamic `dataset` environment variable.
 
 ## History
 - 2026-05-13: Initialized feature branch `chore/project-scaffold-ui` and updated documentation.
@@ -22,5 +26,7 @@ Completed
 - 2026-05-13: Implemented all site sections (Hero, Shows, Mixes, About, Connect, Contact) with Sanity integration.
 - 2026-05-13: Refined UI with semantic theme tokens and fixed `zod` dependency.
 - 2026-05-13: Verified build and marked feature as completed.
-- 2026-05-14: Initialized feature branch `chore/seed-data` for Sanity data seeding.
-- 2026-05-14: Created seed data JSON, imported into Sanity `development` dataset, and fixed related code issues (types, icons). Marked feature as completed.
+- 2026-05-14: Initialized feature branch `chore/seed-data` for Sanity data seeding. Created seed data JSON, imported into Sanity `development` dataset, and fixed related code issues (types, icons). Marked feature as completed.
+- 2026-05-14: Switched to `fix/soundcloud-player-url` to fix the SoundCloud player and implement custom UI.
+- 2026-05-14: Completed custom SoundCloud player implementation with Widget API and shadcn components. Fixed build errors, improved accessibility, and synchronized Studio dataset config.
+- 2026-05-14: Refactored types and UI for final production-ready state.

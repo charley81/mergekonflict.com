@@ -6,8 +6,8 @@ import Link from 'next/link'
 interface Show {
   _id: string
   date: string
-  time?: string
   venue: string
+  time?: string
   url: string
 }
 
