@@ -3,7 +3,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { HugeiconsIcon } from '@hugeicons/react'
-import { Menu01Icon, Cancel01Icon } from '@hugeicons/core-free-icons'
+import { Menu01Icon } from '@hugeicons/core-free-icons'
 
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'

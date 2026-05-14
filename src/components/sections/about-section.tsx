@@ -20,7 +20,7 @@ export async function AboutSection() {
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-border/50">
             <Image
               src="/images/about.png"
-              alt="Merge Konflict"
+              alt="Merge Konflict artist portrait"
               fill
               className="object-cover transition-transform duration-700 hover:scale-105"
             />

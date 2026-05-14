@@ -28,7 +28,7 @@ export async function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src={bgImage}
-          alt="Merge Konflict Hero"
+          alt={`${siteName} - ${tagline}`}
           fill
           priority
           className="object-cover"
@@ -52,6 +52,7 @@ export async function HeroSection() {
           <HugeiconsIcon 
             icon={ArrowDownDoubleIcon} 
             className="w-10 h-10 text-white opacity-80 hover:opacity-100 transition-opacity" 
+            aria-hidden="true"
           />
         </a>
       </div>

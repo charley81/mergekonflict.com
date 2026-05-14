@@ -1,26 +1,18 @@
-# Current Feature: Stitch Design Extraction & Full Site Build
+# Current Feature: Sanity Data Seeding (Development Dataset)
 
 ## Status
 Completed
 
 ## Goals
-- Extract design system from Stitch project `9965551158283883935` and generate `DESIGN.md`. (Done)
-- Build a single-page site layout composing all sections in `src/app/page.tsx`. (Done)
-- Implement responsive Navbar with smooth-scroll and theme toggle. (Done)
-- Create Hero section with dynamic content from Sanity and background image. (Done)
-- Build Upcoming Shows section fetching and sorting data from Sanity. (Done)
-- Implement Latest Mixes section using SoundCloud Widget API and custom controls. (Note: Using styled iframe for now, custom player deferred).
-- Build About section with Portable Text rendering from Sanity. (Done)
-- Create Connect section with social links from Sanity. (Done)
-- Implement Contact Form with shadcn pattern, `useActionState`, Zod validation, and Resend integration. (Done)
-- Ensure 100% shadcn/ui component usage and mobile-first responsive design. (Done)
+- Create seed data for `show` document type with realistic upcoming DNB events. (Done)
+- Create seed data for `siteSettings` document type including Hero, About, Connect, and Footer content. (Done)
+- Import seed data into the Sanity `development` dataset. (Done)
+- Verify content is correctly populated in the local frontend. (Done - via successful build and data creation)
 
 ## Notes
-- Integrated with Sanity CMS for all dynamic content.
-- Uses Resend for contact form email notifications.
-- Follows shadcn's latest form and server action patterns.
-- Verified all components use semantic theme colors from `globals.css`.
-- Production build passing.
+- Targeting `development` dataset only.
+- Seed data includes placeholder images and rich text for the bio.
+- Fixed several pre-existing issues found by `code-scanner` (any types, accessibility, unused imports, icon bundle size).
 
 ## History
 - 2026-05-13: Initialized feature branch `chore/project-scaffold-ui` and updated documentation.
@@ -30,3 +22,5 @@ Completed
 - 2026-05-13: Implemented all site sections (Hero, Shows, Mixes, About, Connect, Contact) with Sanity integration.
 - 2026-05-13: Refined UI with semantic theme tokens and fixed `zod` dependency.
 - 2026-05-13: Verified build and marked feature as completed.
+- 2026-05-14: Initialized feature branch `chore/seed-data` for Sanity data seeding.
+- 2026-05-14: Created seed data JSON, imported into Sanity `development` dataset, and fixed related code issues (types, icons). Marked feature as completed.

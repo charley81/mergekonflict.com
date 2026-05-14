@@ -1,0 +1,75 @@
+[
+  {
+    "_type": "show",
+    "date": "2026-06-15",
+    "time": "10:00 PM - 4:00 AM",
+    "url": "https://xoyo.co.uk",
+    "venue": "XOYO, London"
+  },
+  {
+    "_type": "show",
+    "date": "2026-06-28",
+    "time": "11:00 PM - 5:00 AM",
+    "url": "https://steelyard.london",
+    "venue": "Steel Yard, London"
+  },
+  {
+    "_type": "show",
+    "date": "2026-07-12",
+    "time": "11:00 PM - 7:00 AM",
+    "url": "https://fabriclondon.com",
+    "venue": "FABRIC, London"
+  },
+  {
+    "_type": "show",
+    "date": "2026-08-20",
+    "time": "12:00 PM - 10:00 PM",
+    "url": "https://hospitalityinthewoods.com",
+    "venue": "Beckenham Place Park, London"
+  },
+  {
+    "_type": "show",
+    "date": "2026-09-05",
+    "time": "9:00 PM - 4:00 AM",
+    "url": "https://sunandbass.net",
+    "venue": "San Teodoro, Sardinia"
+  },
+  {
+    "_type": "siteSettings",
+    "siteName": "merge konflict",
+    "tagline": "Dark Techstep & Amen Heavy DNB",
+    "soundcloudPlaylistUrl": "https://soundcloud.com/mergekonflict/sets/mixes",
+    "soundcloudProfileUrl": "https://soundcloud.com/mergekonflict",
+    "socialLinks": [
+      {
+        "platform": "SoundCloud",
+        "url": "https://soundcloud.com/mergekonflict",
+        "icon": "SoundcloudIcon"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com/mergekonflict",
+        "icon": "InstagramIcon"
+      },
+      {
+        "platform": "Bandcamp",
+        "url": "https://mergekonflict.bandcamp.com",
+        "icon": "Link01Icon"
+      }
+    ],
+    "aboutBio": [
+      {
+        "_type": "block",
+        "children": [
+          {
+            "_type": "span",
+            "text": "Merge Konflict is a producer and DJ specialized in dark techstep and amen-heavy drum and bass. With a focus on aggressive sound design and intricate breakbeat manipulation, he has carved a niche in the underground DNB scene."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      }
+    ],
+    "footerCopyright": "© {year} merge konflict. All rights reserved."
+  }
+]
