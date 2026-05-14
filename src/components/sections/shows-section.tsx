@@ -7,13 +7,13 @@ interface Show {
   _id: string
   date: string
   venue: string
-  time: string
+  time?: string
   url: string
 }
 
 async function getShows(): Promise<Show[]> {
   const query = `*[_type == "show" && date >= now()] | order(date asc)`
-  return await client.fetch(query)
+  return await client.fetch<Show[]>(query)
 }
 
 export async function ShowsSection() {

@@ -26,6 +26,7 @@ Completed
 - 2026-05-13: Implemented all site sections (Hero, Shows, Mixes, About, Connect, Contact) with Sanity integration.
 - 2026-05-13: Refined UI with semantic theme tokens and fixed `zod` dependency.
 - 2026-05-13: Verified build and marked feature as completed.
+- 2026-05-14: Initialized feature branch `chore/seed-data` for Sanity data seeding. Created seed data JSON, imported into Sanity `development` dataset, and fixed related code issues (types, icons). Marked feature as completed.
 - 2026-05-14: Switched to `fix/soundcloud-player-url` to fix the SoundCloud player and implement custom UI.
 - 2026-05-14: Completed custom SoundCloud player implementation with Widget API and shadcn components. Fixed build errors, improved accessibility, and synchronized Studio dataset config.
 - 2026-05-14: Refactored types and UI for final production-ready state.

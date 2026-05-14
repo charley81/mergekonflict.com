@@ -1,13 +1,30 @@
 import { client } from '@/sanity/lib/client'
 import { HugeiconsIcon } from '@hugeicons/react'
-import * as Icons from '@hugeicons/core-free-icons'
-import { Link01Icon } from '@hugeicons/core-free-icons'
+import { 
+  SoundcloudIcon, 
+  InstagramIcon, 
+  Facebook02Icon, 
+  YoutubeIcon, 
+  TwitchIcon,
+  Link01Icon 
+} from '@hugeicons/core-free-icons'
 import Link from 'next/link'
 
 interface SocialLink {
   platform: string;
   url: string;
   icon: string;
+}
+
+// Hugeicons uses a specific format for their icons
+type HugeiconType = [string, Record<string, string | number>][]
+
+const ICON_MAP: Record<string, HugeiconType> = {
+  SoundcloudIcon: SoundcloudIcon as unknown as HugeiconType,
+  InstagramIcon: InstagramIcon as unknown as HugeiconType,
+  Facebook02Icon: Facebook02Icon as unknown as HugeiconType,
+  YoutubeIcon: YoutubeIcon as unknown as HugeiconType,
+  TwitchIcon: TwitchIcon as unknown as HugeiconType,
 }
 
 async function getConnectData() {
@@ -31,8 +48,7 @@ export async function ConnectSection() {
         
         <div className="flex flex-wrap justify-center gap-6">
           {data.socialLinks.map((link, index) => {
-            // Dynamically get the icon component from the Icons object
-            const IconComponent = (Icons as Record<string, any>)[link.icon] || Link01Icon
+            const IconComponent = (ICON_MAP[link.icon] || Link01Icon) as HugeiconType
 
             return (
               <Link 
