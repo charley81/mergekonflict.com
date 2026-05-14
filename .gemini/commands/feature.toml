@@ -14,7 +14,7 @@ You MUST follow this workflow in exact order for every feature implementation. D
   - If it does not exist, create and switch: `git checkout -b <branch-name>`
 - Report the branch you are now on before proceeding.
 
-### 1. DOCUMENT
+### 1. DOCUMENT START
 - Read @context/current-feature.md
 - If the file is empty or contains a different feature, replace its contents with the current feature name, status (in progress), goals, and notes
 - If it already has this feature, update status to "in progress"
@@ -42,19 +42,20 @@ You MUST follow this workflow in exact order for every feature implementation. D
 - If build fails after 3 iterations, STOP and report the specific errors. Do not continue.
 - If build passes, proceed to step 6
 
-### 6. COMMIT & PUSH
+### 6. DOCUMENT COMPLETION
+- Update @context/current-feature.md: set status to "completed"
+- Add entry to history section with date and brief summary
+- This step MUST be done BEFORE committing to ensure the documentation change is included in the commit.
+
+### 7. COMMIT & PUSH
 - Only after build passes and all tests pass
-- Stage all changed files: `git add .`
+- Stage all changed files (including documentation updates): `git add .`
 - Commit with a conventional commit message: `<type>(<scope>): <description>`
   - type: feat (feature), fix (bug fix), chore (tooling), refactor, docs, test
   - scope: the feature name (e.g., hero-section, contact-form, theme-system)
   - description: brief imperative summary
 - Push the branch to remote: `git push origin <current-branch>`
 - DO NOT merge to main — the PR will be reviewed separately
-
-### 7. UPDATE DOCUMENTATION
-- Update @context/current-feature.md: set status to "completed"
-- Add entry to history section with date and brief summary
 - Report final summary to the user
 
 ## Important Rules

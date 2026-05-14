@@ -18,9 +18,16 @@ export default defineType({
       description: 'e.g., 10:00 PM - 2:00 AM',
     }),
     defineField({
+      name: 'venue',
+      title: 'Venue',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'url',
       title: 'URL',
       type: 'url',
+      description: 'Ticket or event link',
       validation: (Rule) => Rule.required(),
     }),
   ],
