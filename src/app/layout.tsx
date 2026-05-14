@@ -3,6 +3,8 @@ import { Figtree, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Providers } from "@/components/providers";
+import { Navbar } from "@/components/navbar";
+import { Toaster } from "@/components/ui/sonner";
 
 const interHeading = Inter({subsets:['latin'],variable:'--font-heading'});
 
@@ -26,7 +28,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Providers>
-          <main className="flex-1 flex flex-col">{children}</main>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Toaster />
         </Providers>
       </body>
     </html>
