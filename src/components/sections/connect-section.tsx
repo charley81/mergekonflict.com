@@ -67,7 +67,7 @@ export async function ConnectSection() {
             return (
               <Link 
                 key={index} 
-                href={link.url} 
+                href={link.url || "#"} 
                 target="_blank"
                 className="group relative p-4 bg-background rounded-md border border-border/50 hover:border-primary transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-primary/20"
                 aria-label={link.platform}

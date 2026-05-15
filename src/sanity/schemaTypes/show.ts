@@ -12,7 +12,7 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'time',
+      name: 'timeSlot',
       title: 'Time',
       type: 'string',
       description: 'e.g., 10:00 PM - 2:00 AM',
@@ -24,7 +24,7 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'url',
+      name: 'ticketUrl',
       title: 'URL',
       type: 'url',
       description: 'Ticket or event link',

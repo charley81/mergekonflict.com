@@ -1,60 +1,66 @@
 [
   {
+    "_id": "show-001",
     "_type": "show",
-    "date": "2026-06-15",
-    "time": "10:00 PM - 4:00 AM",
-    "url": "https://xoyo.co.uk",
-    "venue": "XOYO, London"
+    "date": "2026-06-15T22:00:00.000Z",
+    "timeSlot": "5:00 PM - 7:00 AM",
+    "ticketUrl": "https://piranet.radio/",
+    "venue": "piranet.radio"
   },
   {
+    "_id": "show-002",
     "_type": "show",
-    "date": "2026-06-28",
-    "time": "11:00 PM - 5:00 AM",
-    "url": "https://steelyard.london",
-    "venue": "Steel Yard, London"
+    "date": "2026-06-28T23:00:00.000Z",
+    "timeSlot": "5:00 PM - 7:00 AM",
+    "ticketUrl": "https://piranet.radio/",
+    "venue": "piranet.radio"
   },
   {
+    "_id": "show-003",
     "_type": "show",
-    "date": "2026-07-12",
-    "time": "11:00 PM - 7:00 AM",
-    "url": "https://fabriclondon.com",
-    "venue": "FABRIC, London"
+    "date": "2026-07-12T23:00:00.000Z",
+    "timeSlot": "5:00 PM - 7:00 AM",
+    "ticketUrl": "https://piranet.radio/",
+    "venue": "piranet.radio"
   },
   {
+    "_id": "show-004",
     "_type": "show",
-    "date": "2026-08-20",
-    "time": "12:00 PM - 10:00 PM",
-    "url": "https://hospitalityinthewoods.com",
-    "venue": "Beckenham Place Park, London"
+    "date": "2026-08-20T12:00:00.000Z",
+    "timeSlot": "5:00 PM - 7:00 AM",
+    "ticketUrl": "https://piranet.radio/",
+    "venue": "piranet.radio"
   },
   {
+    "_id": "show-005",
     "_type": "show",
-    "date": "2026-09-05",
-    "time": "9:00 PM - 4:00 AM",
-    "url": "https://sunandbass.net",
-    "venue": "San Teodoro, Sardinia"
+    "date": "2026-09-05T21:00:00.000Z",
+    "timeSlot": "5:00 PM - 7:00 AM",
+    "ticketUrl": "https://piranet.radio/",
+    "venue": "piranet.radio"
   },
   {
+    "_id": "site-settings-001",
     "_type": "siteSettings",
-    "siteName": "merge konflict",
-    "tagline": "Dark Techstep & Amen Heavy DNB",
-    "soundcloudPlaylistUrl": "https://soundcloud.com/mergekonflict/sets/mixes",
+    "artistName": "merge konflict",
+    "heroTagline": "Dark Techstep & Amen Heavy DNB",
+    "soundcloudPlaylistUrl": "https://soundcloud.com/mergekonflict/sets/organized-noize-piranet-radio?si=c1283b64360342efad777bd60caf15ce&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     "soundcloudProfileUrl": "https://soundcloud.com/mergekonflict",
     "socialLinks": [
       {
         "platform": "SoundCloud",
         "url": "https://soundcloud.com/mergekonflict",
-        "icon": "SoundcloudIcon"
+        "icon": "soundcloud"
       },
       {
         "platform": "Instagram",
         "url": "https://instagram.com/mergekonflict",
-        "icon": "InstagramIcon"
+        "icon": "instagram"
       },
       {
         "platform": "Bandcamp",
         "url": "https://mergekonflict.bandcamp.com",
-        "icon": "Link01Icon"
+        "icon": "bandcamp"
       }
     ],
     "aboutBio": [

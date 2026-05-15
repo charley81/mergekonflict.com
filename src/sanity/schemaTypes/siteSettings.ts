@@ -6,14 +6,14 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'siteName',
-      title: 'Site Name',
+      name: 'artistName',
+      title: 'Artist Name',
       type: 'string',
       initialValue: 'merge konflict',
     }),
     defineField({
-      name: 'tagline',
-      title: 'Tagline',
+      name: 'heroTagline',
+      title: 'Hero Tagline',
       type: 'string',
       initialValue: 'Dark Techstep & Amen Heavy DNB',
     }),

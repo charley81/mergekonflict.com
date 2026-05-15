@@ -5,8 +5,7 @@ import { urlFor } from '@/sanity/lib/image'
 
 async function getHeroData() {
   const query = `*[_type == "siteSettings"][0]{
-    siteName,
-    tagline,
+    artistName,
     heroBackground
   }`
   return await client.fetch(query)
@@ -14,7 +13,7 @@ async function getHeroData() {
 
 export async function HeroSection() {
   const data = await getHeroData()
-  const siteName = data?.siteName || 'MERGE KONFLICT'
+  const artistName = data?.artistName || 'MERGE KONFLICT'
 
   const bgImage = data?.heroBackground 
     ? urlFor(data.heroBackground).url() 
@@ -26,7 +25,7 @@ export async function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src={bgImage}
-          alt={siteName}
+          alt={artistName}
           fill
           priority
           className="object-cover"
@@ -37,7 +36,7 @@ export async function HeroSection() {
       {/* Content: Rotated Vertical h1 at the absolute bottom left - FLUSH */}
       <div className="absolute bottom-0 left-0 z-20 pointer-events-none">
         <h1 className="origin-bottom-left -rotate-90 translate-x-[0.95em] whitespace-nowrap text-7xl md:text-9xl lg:text-[12rem] font-black uppercase tracking-tighter leading-none text-white animate-in fade-in duration-1000">
-          {siteName}
+          {artistName}
         </h1>
       </div>
 
