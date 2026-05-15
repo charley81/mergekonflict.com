@@ -13,11 +13,11 @@ export async function AboutSection() {
   const data = await getAboutData()
 
   return (
-    <section id="about" className="py-16 bg-background">
+    <section id="about" className="py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           {/* Column 1: Image */}
-          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-border/50">
+          <div className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-2xl border border-border/50">
             <Image
               src="/images/about.png"
               alt="Merge Konflict artist portrait"

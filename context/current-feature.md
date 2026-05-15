@@ -1,32 +1,27 @@
-# Current Feature: Fix SoundCloud Player — Custom UI with Widget API
+# Current Feature: UI Styling Polish
 
 ## Status
 Completed
 
 ## Goals
-- Fix the "Invalid URL" error by correctly constructing the SoundCloud embed iframe `src`. (Done)
-- Implement a fully custom audio player UI using shadcn/ui `Button` and `Slider`. (Done)
-- Integrate the SoundCloud Widget JavaScript API for playback control and metadata. (Done)
-- Ensure loading, error, and empty states are handled correctly. (Done)
-- Maintain responsive, mobile-first design and use semantic Tailwind tokens. (Done)
+- Double vertical whitespace for all sections between Hero and Footer. (Done)
+- Restore shadcn default border radius (`0.5rem`) for all components. (Done)
+- Ensure Navbar has an opaque background in light mode. (Done)
+- Align mobile sidebar padding with the header logo/close button. (Done)
+- Rotate Hero `h1` -90 degrees, position flush at bottom-left (left: 0, bottom: 0). (Done)
+- Remove play icon from Mixes section title, left-align it, and set container width to `max-w-4xl`. (Done)
+- Update Shows section button text to "Listen". (Done)
+- Add smooth scroll to all navbar links via global CSS. (Done)
 
 ## Notes
-- The player uses a hidden iframe and the SoundCloud Widget API for a headless integration.
-- UI is built entirely with shadcn components (Button, Slider, Skeleton).
-- Accessibility improved with aria-labels.
-- Next.js image optimization used for track artwork.
-- **Refactoring:** Consolidated `TrackInfo` types and smoothed out slider progress.
-- **Studio Fix:** Updated `sanity.config.ts` to use the dynamic `dataset` environment variable.
+- Removed all hardcoded `rounded-full` and high-radius overrides to maintain shadcn default aesthetic.
+- Hero `h1` is vertical and perfectly flush at the absolute bottom-left corner of the screen/hero section.
+- Fixed rotation visibility by adding a relative translation (`0.95em`) to bring the rotated baseline into view.
+- `scroll-behavior: smooth` implemented globally.
+- Verified all sections for visual consistency and responsiveness.
 
 ## History
-- 2026-05-13: Initialized feature branch `chore/project-scaffold-ui` and updated documentation.
-- 2026-05-13: Completed shadcn/ui Preset + Component Library + Theme System implementation.
-- 2026-05-13: Switched to `feature/stitch-to-react` to begin design extraction and site build.
-- 2026-05-13: Extracted design system from Stitch to `.stitch/DESIGN.md`.
-- 2026-05-13: Implemented all site sections (Hero, Shows, Mixes, About, Connect, Contact) with Sanity integration.
-- 2026-05-13: Refined UI with semantic theme tokens and fixed `zod` dependency.
-- 2026-05-13: Verified build and marked feature as completed.
-- 2026-05-14: Initialized feature branch `chore/seed-data` for Sanity data seeding. Created seed data JSON, imported into Sanity `development` dataset, and fixed related code issues (types, icons). Marked feature as completed.
-- 2026-05-14: Switched to `fix/soundcloud-player-url` to fix the SoundCloud player and implement custom UI.
-- 2026-05-14: Completed custom SoundCloud player implementation with Widget API and shadcn components. Fixed build errors, improved accessibility, and synchronized Studio dataset config.
-- 2026-05-14: Refactored types and UI for final production-ready state.
+- 2026-05-14: Initialized feature branch `feature/ui-styling-polish`.
+- 2026-05-14: Applied initial polish: doubled spacing, fixed border radius, updated Navbar.
+- 2026-05-14: Refined Hero text positioning (bottom-left), updated Shows buttons, and aligned Mixes section. Added smooth scroll.
+- 2026-05-14: Final Hero section refinement: positioned `h1` at absolute `bottom-0 left-0` flush with edges using calculated translation for visibility.

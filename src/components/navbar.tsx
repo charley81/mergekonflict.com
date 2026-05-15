@@ -41,7 +41,7 @@ export function Navbar() {
         'fixed top-0 z-50 w-full transition-all duration-300',
         isScrolled
           ? 'bg-background/80 backdrop-blur-md border-b'
-          : 'bg-transparent'
+          : 'bg-background dark:bg-transparent'
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +65,7 @@ export function Navbar() {
                 </Link>
               ))}
               <ThemeToggle />
-              <Button asChild className="rounded-full">
+              <Button asChild>
                 <Link href="#contact">Book Now</Link>
               </Button>
             </div>
@@ -87,7 +87,7 @@ export function Navbar() {
                     Merge Konflict
                   </SheetTitle>
                 </SheetHeader>
-                <div className="flex flex-col space-y-6 mt-12">
+                <div className="flex flex-col space-y-6 mt-12 px-6">
                   {navLinks.map((link) => (
                     <Link
                       key={link.name}
@@ -97,7 +97,7 @@ export function Navbar() {
                       {link.name}
                     </Link>
                   ))}
-                  <Button asChild className="rounded-full w-full">
+                  <Button asChild className="w-full">
                     <Link href="#contact">Book Now</Link>
                   </Button>
                 </div>

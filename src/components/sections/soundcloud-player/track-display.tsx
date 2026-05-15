@@ -17,7 +17,7 @@ export function TrackDisplay({ currentTrack }: TrackDisplayProps) {
   return (
     <div className="flex flex-col md:flex-row items-center gap-6">
       {artworkUrl ? (
-        <div className="relative w-32 h-32 shrink-0 overflow-hidden rounded-xl shadow-lg">
+        <div className="relative w-32 h-32 shrink-0 overflow-hidden rounded-lg shadow-lg">
           <Image 
             src={artworkUrl} 
             alt={currentTrack?.title || 'Track Artwork'} 
@@ -27,7 +27,7 @@ export function TrackDisplay({ currentTrack }: TrackDisplayProps) {
           />
         </div>
       ) : (
-        <div className="w-32 h-32 shrink-0 rounded-xl bg-muted flex items-center justify-center">
+        <div className="w-32 h-32 shrink-0 rounded-lg bg-muted flex items-center justify-center">
           <HugeiconsIcon icon={PlayIcon} className="w-12 h-12 text-muted-foreground/20" />
         </div>
       )}

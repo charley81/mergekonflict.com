@@ -1,6 +1,4 @@
 import { client } from '@/sanity/lib/client'
-import { HugeiconsIcon } from '@hugeicons/react'
-import { PlayIcon } from '@hugeicons/core-free-icons'
 import SoundCloudPlayer from './soundcloud-player'
 
 async function getMixesData() {
@@ -17,16 +15,11 @@ export async function MixesSection() {
   if (!data?.soundcloudPlaylistUrl) return null
 
   return (
-    <section id="mixes" className="py-16 bg-secondary/30">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center gap-4 mb-12">
-          <div className="p-3 bg-primary rounded-full text-primary-foreground">
-            <HugeiconsIcon icon={PlayIcon} className="w-8 h-8" />
-          </div>
-          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-foreground">
-            Latest Mixes
-          </h2>
-        </div>
+    <section id="mixes" className="py-32 bg-secondary/30">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-12 text-foreground">
+          Latest Mixes
+        </h2>
 
         <SoundCloudPlayer 
           playlistUrl={data.soundcloudPlaylistUrl} 

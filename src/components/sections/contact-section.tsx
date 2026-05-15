@@ -29,7 +29,7 @@ export function ContactSection() {
   }, [state])
 
   return (
-    <section id="contact" className="py-16 bg-background">
+    <section id="contact" className="py-32 bg-background">
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4 text-foreground">
@@ -100,7 +100,7 @@ export function ContactSection() {
 
           <Button 
             type="submit" 
-            className="w-full rounded-full h-12 text-lg font-bold bg-primary text-primary-foreground hover:bg-primary/90"
+            className="w-full h-12 text-lg font-bold bg-primary text-primary-foreground hover:bg-primary/90"
             disabled={isPending}
           >
             {isPending ? 'Sending...' : 'Send Message'}

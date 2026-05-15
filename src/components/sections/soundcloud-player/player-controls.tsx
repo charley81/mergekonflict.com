@@ -33,7 +33,7 @@ export function PlayerControls({ isPlaying, onToggle, onPrev, onNext }: PlayerCo
         size="icon" 
         onClick={onToggle}
         aria-label={isPlaying ? "Pause track" : "Play track"}
-        className="h-14 w-14 rounded-full shadow-lg transition-transform active:scale-95"
+        className="h-14 w-14 shadow-lg transition-transform active:scale-95"
       >
         <HugeiconsIcon 
           icon={isPlaying ? PauseIcon : PlayIcon} 

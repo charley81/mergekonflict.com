@@ -20,7 +20,7 @@ export async function ShowsSection() {
   const shows = await getShows()
 
   return (
-    <section id="shows" className="py-16 bg-background">
+    <section id="shows" className="py-32 bg-background">
       <div className="container mx-auto px-4 max-w-4xl">
         <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-12 text-foreground">
           Upcoming Shows
@@ -56,8 +56,8 @@ export async function ShowsSection() {
                         </p>
                       </div>
                     </div>
-                    <Button asChild variant="outline" className="rounded-full md:w-auto w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                      <Link href={show.url} target="_blank">Tickets / Info</Link>
+                    <Button asChild variant="outline" className="md:w-auto w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                      <Link href={show.url} target="_blank">Listen</Link>
                     </Button>
                   </div>
                   {index < shows.length - 1 && <Separator className="bg-border" />}
