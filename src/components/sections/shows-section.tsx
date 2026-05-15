@@ -7,12 +7,18 @@ interface Show {
   _id: string
   date: string
   venue: string
-  time?: string
-  url: string
+  timeSlot?: string
+  ticketUrl: string
 }
 
 async function getShows(): Promise<Show[]> {
-  const query = `*[_type == "show" && date >= now()] | order(date asc)`
+  const query = `*[_type == "show" && date >= now()] | order(date asc){
+    _id,
+    date,
+    venue,
+    timeSlot,
+    ticketUrl
+  }`
   return await client.fetch<Show[]>(query)
 }
 
@@ -45,19 +51,19 @@ export async function ShowsSection() {
                       </div>
                       <div>
                         <Link 
-                          href={show.url} 
+                          href={show.ticketUrl || "#"} 
                           target="_blank" 
                           className="text-xl font-bold hover:text-primary transition-colors text-foreground"
                         >
                           {show.venue}
                         </Link>
                         <p className="text-muted-foreground text-sm uppercase tracking-wider mt-1">
-                          {show.time}
+                          {show.timeSlot}
                         </p>
                       </div>
                     </div>
                     <Button asChild variant="outline" className="md:w-auto w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                      <Link href={show.url} target="_blank">Listen</Link>
+                      <Link href={show.ticketUrl || "#"} target="_blank">Listen</Link>
                     </Button>
                   </div>
                   {index < shows.length - 1 && <Separator className="bg-border" />}

@@ -1,25 +1,25 @@
-# Current Feature: Icon Migration & Connect Section Update
+# Current Feature: Seed Production Database
 
 ## Status
 Completed
 
 ## Goals
-- Remove `hugeicons-react` from the project. (Done)
-- Replace `hugeicons-react` imports with `lucide-react` equivalents. (Done)
-- Install `@icons-pack/react-simple-icons` for brand logos. (Done)
-- Update Connect section to use brand icons (Bandcamp, Instagram, SoundCloud, Mixcloud). (Done)
-- Implement a three-tier icon resolver for robust icon rendering. (Done)
-- Verify contact form email delivery via Resend. (Done - verified implementation)
+- Update `scripts/seed-data.json` to match Sanity schema definitions. (Done)
+- Update Sanity schemas (`show`, `siteSettings`) to match `seed-data.json`. (Done)
+- Update frontend components to use new field names (`artistName`, `timeSlot`, `ticketUrl`). (Done)
+- Seed Sanity `development` and `production` datasets with initial content. (Done)
+- Add safety fallbacks for dynamic links to prevent `null` href errors. (Done)
 
 ## Notes
-- Branch: `feature/icon-migration`
-- Migrated all UI icons to Lucide.
-- Migrated all brand icons to Simple Icons.
-- Implemented `getPlatformIcon` resolver in `ConnectSection`.
+- Branch: `feature/seed-production-db`
+- Field renames: 
+  - `siteSettings.siteName` -> `artistName`
+  - `show.time` -> `timeSlot`
+  - `show.url` -> `ticketUrl`
+- Deleted old documents with outdated schemas from both datasets.
 
 ## History
-- 2026-05-15: Initialized feature branch `feature/icon-migration`.
-- 2026-05-15: Uninstalled hugeicons packages, installed lucide-react and @icons-pack/react-simple-icons.
-- 2026-05-15: Replaced all hugeicons occurrences with Lucide or Simple Icons.
-- 2026-05-15: Updated ConnectSection with three-tier icon resolver.
-- 2026-05-15: Verified build passes and all hugeicons references are removed.
+- 2026-05-15: Initialized feature branch `feature/seed-production-db`.
+- 2026-05-15: Updated Sanity schemas and frontend components.
+- 2026-05-15: Seeded and published documents in `development` and `production` datasets.
+- 2026-05-15: Verified content and resolved `null` href prop-type errors.
