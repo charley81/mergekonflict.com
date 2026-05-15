@@ -1,12 +1,6 @@
 'use client'
 
-import { HugeiconsIcon } from '@hugeicons/react'
-import { 
-  PlayIcon, 
-  PauseIcon, 
-  PreviousIcon, 
-  NextIcon 
-} from '@hugeicons/core-free-icons'
+import { Play, Pause, SkipBack, SkipForward } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 interface PlayerControlsProps {
@@ -26,7 +20,7 @@ export function PlayerControls({ isPlaying, onToggle, onPrev, onNext }: PlayerCo
         aria-label="Previous track"
         className="h-10 w-10 text-muted-foreground hover:text-foreground hover:bg-muted"
       >
-        <HugeiconsIcon icon={PreviousIcon} className="w-6 h-6" />
+        <SkipBack className="w-6 h-6" />
       </Button>
 
       <Button 
@@ -35,10 +29,11 @@ export function PlayerControls({ isPlaying, onToggle, onPrev, onNext }: PlayerCo
         aria-label={isPlaying ? "Pause track" : "Play track"}
         className="h-14 w-14 shadow-lg transition-transform active:scale-95"
       >
-        <HugeiconsIcon 
-          icon={isPlaying ? PauseIcon : PlayIcon} 
-          className="w-8 h-8" 
-        />
+        {isPlaying ? (
+          <Pause className="w-8 h-8 fill-current" />
+        ) : (
+          <Play className="w-8 h-8 fill-current" />
+        )}
       </Button>
 
       <Button 
@@ -48,7 +43,7 @@ export function PlayerControls({ isPlaying, onToggle, onPrev, onNext }: PlayerCo
         aria-label="Next track"
         className="h-10 w-10 text-muted-foreground hover:text-foreground hover:bg-muted"
       >
-        <HugeiconsIcon icon={NextIcon} className="w-6 h-6" />
+        <SkipForward className="w-6 h-6" />
       </Button>
     </div>
   )

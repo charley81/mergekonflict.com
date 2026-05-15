@@ -2,8 +2,7 @@
 
 import * as React from 'react'
 import Link from 'next/link'
-import { HugeiconsIcon } from '@hugeicons/react'
-import { Menu01Icon } from '@hugeicons/core-free-icons'
+import { Menu } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
@@ -77,7 +76,7 @@ export function Navbar() {
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <HugeiconsIcon icon={Menu01Icon} />
+                  <Menu className="size-5" />
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>

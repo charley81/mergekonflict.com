@@ -1,7 +1,6 @@
 'use client'
 
-import { HugeiconsIcon } from '@hugeicons/react'
-import { PlayIcon } from '@hugeicons/core-free-icons'
+import { Music } from 'lucide-react'
 import Image from 'next/image'
 import type { TrackInfo } from '@/types/soundcloud'
 
@@ -28,7 +27,7 @@ export function TrackDisplay({ currentTrack }: TrackDisplayProps) {
         </div>
       ) : (
         <div className="w-32 h-32 shrink-0 rounded-lg bg-muted flex items-center justify-center">
-          <HugeiconsIcon icon={PlayIcon} className="w-12 h-12 text-muted-foreground/20" />
+          <Music className="w-12 h-12 text-muted-foreground/20" />
         </div>
       )}
       

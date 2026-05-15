@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import { HugeiconsIcon } from '@hugeicons/react'
-import { ArrowDownDoubleIcon } from '@hugeicons/core-free-icons'
+import { ChevronsDown } from 'lucide-react'
 import { client } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image'
 
@@ -45,11 +44,7 @@ export async function HeroSection() {
       {/* Scroll Indicator */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 animate-bounce">
         <a href="#shows" aria-label="Scroll to Shows" className="pointer-events-auto">
-          <HugeiconsIcon 
-            icon={ArrowDownDoubleIcon} 
-            className="w-10 h-10 text-white opacity-80 hover:opacity-100 transition-opacity" 
-            aria-hidden="true"
-          />
+          <ChevronsDown className="w-10 h-10 text-white opacity-80 hover:opacity-100 transition-opacity" />
         </a>
       </div>
     </section>
