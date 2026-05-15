@@ -11,7 +11,6 @@ import {
 } from '@icons-pack/react-simple-icons'
 import { Link2, Share2 } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
 import { SITE_SETTINGS_QUERY } from '@/lib/queries'
 
 interface SocialLink {
@@ -42,11 +41,15 @@ function getPlatformIcon(platform: string, iconName: string) {
   return Share2
 }
 
+interface ConnectData {
+  socialLinks: SocialLink[] | null
+}
+
 async function getConnectData() {
-  return await sanityFetch({
+  return await sanityFetch<ConnectData>({
     query: SITE_SETTINGS_QUERY,
     tags: ['siteSettings']
-  }) as { socialLinks: SocialLink[] | null }
+  })
 }
 
 export async function ConnectSection() {

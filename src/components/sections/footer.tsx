@@ -1,8 +1,12 @@
 import { sanityFetch } from '@/sanity/lib/client'
 import { SITE_SETTINGS_QUERY } from '@/lib/queries'
 
+interface FooterData {
+  footerCopyright?: string
+}
+
 async function getFooterData() {
-  return await sanityFetch({
+  return await sanityFetch<FooterData>({
     query: SITE_SETTINGS_QUERY,
     tags: ['siteSettings']
   })
