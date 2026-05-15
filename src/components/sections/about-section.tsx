@@ -1,12 +1,17 @@
 import Image from 'next/image'
-import { client } from '@/sanity/lib/client'
+import { sanityFetch } from '@/sanity/lib/client'
 import { PortableText } from '@portabletext/react'
+import { SITE_SETTINGS_QUERY } from '@/lib/queries'
+
+interface AboutData {
+  aboutBio: unknown[]
+}
 
 async function getAboutData() {
-  const query = `*[_type == "siteSettings"][0]{
-    aboutBio
-  }`
-  return await client.fetch(query)
+  return await sanityFetch<AboutData>({
+    query: SITE_SETTINGS_QUERY,
+    tags: ['siteSettings']
+  })
 }
 
 export async function AboutSection() {
@@ -33,7 +38,7 @@ export async function AboutSection() {
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
               {data?.aboutBio ? (
-                <PortableText value={data.aboutBio} />
+                <PortableText value={data.aboutBio as any} />
               ) : (
                 <p>
                   Merge Konflict is a producer and DJ pushing the boundaries of dark techstep and amen-heavy drum and bass. 

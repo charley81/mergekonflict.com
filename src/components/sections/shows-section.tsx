@@ -1,7 +1,8 @@
-import { client } from '@/sanity/lib/client'
+import { sanityFetch } from '@/sanity/lib/client'
 import { Separator } from '@/components/ui/separator'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { SHOWS_QUERY } from '@/lib/queries'
 
 interface Show {
   _id: string
@@ -12,14 +13,10 @@ interface Show {
 }
 
 async function getShows(): Promise<Show[]> {
-  const query = `*[_type == "show" && date >= now()] | order(date asc){
-    _id,
-    date,
-    venue,
-    timeSlot,
-    ticketUrl
-  }`
-  return await client.fetch<Show[]>(query)
+  return await sanityFetch<Show[]>({
+    query: SHOWS_QUERY,
+    tags: ['show']
+  })
 }
 
 export async function ShowsSection() {

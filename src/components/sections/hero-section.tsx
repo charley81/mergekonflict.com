@@ -1,19 +1,26 @@
 import Image from 'next/image'
 import { ChevronsDown } from 'lucide-react'
-import { client } from '@/sanity/lib/client'
+import { sanityFetch } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image'
+import { SITE_SETTINGS_QUERY } from '@/lib/queries'
+
+interface HeroData {
+  artistName: string
+  heroTitle?: string
+  heroBackground: unknown
+}
 
 async function getHeroData() {
-  const query = `*[_type == "siteSettings"][0]{
-    artistName,
-    heroBackground
-  }`
-  return await client.fetch(query)
+  return await sanityFetch<HeroData>({
+    query: SITE_SETTINGS_QUERY,
+    tags: ['siteSettings']
+  })
 }
 
 export async function HeroSection() {
   const data = await getHeroData()
   const artistName = data?.artistName || 'MERGE KONFLICT'
+  const heroTitle = data?.heroTitle || artistName
 
   const bgImage = data?.heroBackground 
     ? urlFor(data.heroBackground).url() 
@@ -36,7 +43,7 @@ export async function HeroSection() {
       {/* Content: Rotated Vertical h1 at the absolute bottom left - FLUSH */}
       <div className="absolute bottom-0 left-0 z-20 pointer-events-none">
         <h1 className="origin-bottom-left -rotate-90 translate-x-[0.95em] whitespace-nowrap text-7xl md:text-9xl lg:text-[12rem] font-black uppercase tracking-tighter leading-none text-white animate-in fade-in duration-1000">
-          {artistName}
+          {heroTitle}
         </h1>
       </div>
 
@@ -49,4 +56,3 @@ export async function HeroSection() {
     </section>
   )
 }
-

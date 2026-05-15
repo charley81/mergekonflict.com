@@ -1,12 +1,17 @@
-import { client } from '@/sanity/lib/client'
+import { sanityFetch } from '@/sanity/lib/client'
 import SoundCloudPlayer from './soundcloud-player'
+import { SITE_SETTINGS_QUERY } from '@/lib/queries'
+
+interface MixesData {
+  soundcloudPlaylistUrl?: string
+  soundcloudProfileUrl?: string
+}
 
 async function getMixesData() {
-  const query = `*[_type == "siteSettings"][0]{
-    soundcloudPlaylistUrl,
-    soundcloudProfileUrl
-  }`
-  return await client.fetch(query)
+  return await sanityFetch<MixesData>({
+    query: SITE_SETTINGS_QUERY,
+    tags: ['siteSettings']
+  })
 }
 
 export async function MixesSection() {

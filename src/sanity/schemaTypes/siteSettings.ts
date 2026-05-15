@@ -12,6 +12,13 @@ export default defineType({
       initialValue: 'merge konflict',
     }),
     defineField({
+      name: 'heroTitle',
+      title: 'Hero Title',
+      type: 'string',
+      description: 'The large text displayed in the hero section (e.g. "Merge")',
+      initialValue: 'Merge',
+    }),
+    defineField({
       name: 'heroTagline',
       title: 'Hero Tagline',
       type: 'string',

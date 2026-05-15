@@ -1,10 +1,15 @@
-import { client } from '@/sanity/lib/client'
+import { sanityFetch } from '@/sanity/lib/client'
+import { SITE_SETTINGS_QUERY } from '@/lib/queries'
+
+interface FooterData {
+  footerCopyright?: string
+}
 
 async function getFooterData() {
-  const query = `*[_type == "siteSettings"][0]{
-    footerCopyright
-  }`
-  return await client.fetch(query)
+  return await sanityFetch<FooterData>({
+    query: SITE_SETTINGS_QUERY,
+    tags: ['siteSettings']
+  })
 }
 
 export async function Footer() {
