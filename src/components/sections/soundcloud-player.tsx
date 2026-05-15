@@ -52,7 +52,7 @@ export default function SoundCloudPlayer({ playlistUrl, profileUrl }: SoundCloud
         aria-hidden="true"
       />
 
-      <div className="bg-card border border-border/50 rounded-2xl p-6 shadow-2xl space-y-6">
+      <div className="bg-card border border-border/50 rounded-lg p-6 shadow-2xl space-y-6">
         {error ? (
           <div className="text-center py-8 space-y-4">
             <p className="text-destructive font-medium">{error}</p>
@@ -102,7 +102,7 @@ function PlayerSkeleton() {
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row items-center gap-6">
-        <Skeleton className="w-32 h-32 rounded-xl" />
+        <Skeleton className="w-32 h-32 rounded-lg" />
         <div className="flex-1 space-y-3 w-full text-center md:text-left">
           <Skeleton className="h-6 w-3/4 mx-auto md:mx-0" />
           <Skeleton className="h-4 w-1/2 mx-auto md:mx-0" />
@@ -110,9 +110,9 @@ function PlayerSkeleton() {
       </div>
       <Skeleton className="h-2 w-full" />
       <div className="flex justify-center gap-4">
-        <Skeleton className="h-10 w-10 rounded-full" />
-        <Skeleton className="h-12 w-12 rounded-full" />
-        <Skeleton className="h-10 w-10 rounded-full" />
+        <Skeleton className="h-10 w-10 rounded-md" />
+        <Skeleton className="h-12 w-12 rounded-md" />
+        <Skeleton className="h-10 w-10 rounded-md" />
       </div>
     </div>
   )

@@ -40,7 +40,7 @@ export async function ConnectSection() {
   if (!data?.socialLinks || data.socialLinks.length === 0) return null
 
   return (
-    <section id="connect" className="py-16 bg-secondary/10">
+    <section id="connect" className="py-32 bg-secondary/10">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-12">
           Connect
@@ -55,7 +55,7 @@ export async function ConnectSection() {
                 key={index} 
                 href={link.url} 
                 target="_blank"
-                className="group relative p-4 bg-background rounded-full border border-border/50 hover:border-primary transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-primary/20"
+                className="group relative p-4 bg-background rounded-md border border-border/50 hover:border-primary transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-primary/20"
                 aria-label={link.platform}
               >
                 <HugeiconsIcon 

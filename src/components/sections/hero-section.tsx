@@ -16,19 +16,18 @@ async function getHeroData() {
 export async function HeroSection() {
   const data = await getHeroData()
   const siteName = data?.siteName || 'MERGE KONFLICT'
-  const tagline = data?.tagline || 'Dark Techstep & Amen Heavy DNB'
-  
+
   const bgImage = data?.heroBackground 
     ? urlFor(data.heroBackground).url() 
     : "/images/hero.png"
 
   return (
-    <section id="hero" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src={bgImage}
-          alt={`${siteName} - ${tagline}`}
+          alt={siteName}
           fill
           priority
           className="object-cover"
@@ -36,19 +35,16 @@ export async function HeroSection() {
         <div className="absolute inset-0 bg-black/60 z-10" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-20 text-center px-4">
-        <h1 className="text-[12vw] md:text-[185.4px] font-black uppercase tracking-tighter leading-none text-white mb-4 animate-in fade-in zoom-in duration-1000">
+      {/* Content: Rotated Vertical h1 at the absolute bottom left - FLUSH */}
+      <div className="absolute bottom-0 left-0 z-20 pointer-events-none">
+        <h1 className="origin-bottom-left -rotate-90 translate-x-[0.95em] whitespace-nowrap text-7xl md:text-9xl lg:text-[12rem] font-black uppercase tracking-tighter leading-none text-white animate-in fade-in duration-1000">
           {siteName}
         </h1>
-        <p className="text-lg md:text-2xl font-medium text-white/80 uppercase tracking-widest max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
-          {tagline}
-        </p>
       </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-        <a href="#shows" aria-label="Scroll to Shows">
+        <a href="#shows" aria-label="Scroll to Shows" className="pointer-events-auto">
           <HugeiconsIcon 
             icon={ArrowDownDoubleIcon} 
             className="w-10 h-10 text-white opacity-80 hover:opacity-100 transition-opacity" 
@@ -59,3 +55,4 @@ export async function HeroSection() {
     </section>
   )
 }
+
