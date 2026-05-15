@@ -1,8 +1,7 @@
 'use client'
 
 import Script from 'next/script'
-import { HugeiconsIcon } from '@hugeicons/react'
-import { ArrowUpRight01Icon } from '@hugeicons/core-free-icons'
+import { ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import Link from 'next/link'
@@ -89,7 +88,7 @@ export default function SoundCloudPlayer({ playlistUrl, profileUrl }: SoundCloud
           <Button asChild variant="link" className="text-primary font-bold group">
             <Link href={profileUrl} target="_blank" className="flex items-center gap-2">
               View All Mixes on SoundCloud
-              <HugeiconsIcon icon={ArrowUpRight01Icon} className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </Button>
         </div>

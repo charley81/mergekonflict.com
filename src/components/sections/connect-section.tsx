@@ -1,14 +1,17 @@
 import { client } from '@/sanity/lib/client'
-import { HugeiconsIcon } from '@hugeicons/react'
 import { 
-  SoundcloudIcon, 
-  InstagramIcon, 
-  Facebook02Icon, 
-  YoutubeIcon, 
-  TwitchIcon,
-  Link01Icon 
-} from '@hugeicons/core-free-icons'
+  SiSoundcloud, 
+  SiInstagram, 
+  SiBandcamp, 
+  SiMixcloud,
+  SiFacebook,
+  SiYoutube,
+  SiTwitch,
+  SiX
+} from '@icons-pack/react-simple-icons'
+import { Link2, Share2 } from 'lucide-react'
 import Link from 'next/link'
+import React from 'react'
 
 interface SocialLink {
   platform: string;
@@ -16,15 +19,26 @@ interface SocialLink {
   icon: string;
 }
 
-// Hugeicons uses a specific format for their icons
-type HugeiconType = [string, Record<string, string | number>][]
+// Three-tier icon resolver
+function getPlatformIcon(platform: string, iconName: string) {
+  const p = platform.toLowerCase()
+  const i = iconName.toLowerCase()
 
-const ICON_MAP: Record<string, HugeiconType> = {
-  SoundcloudIcon: SoundcloudIcon as unknown as HugeiconType,
-  InstagramIcon: InstagramIcon as unknown as HugeiconType,
-  Facebook02Icon: Facebook02Icon as unknown as HugeiconType,
-  YoutubeIcon: YoutubeIcon as unknown as HugeiconType,
-  TwitchIcon: TwitchIcon as unknown as HugeiconType,
+  // Tier 1: Specific Brand Icons (Simple Icons)
+  if (p.includes('soundcloud') || i.includes('soundcloud')) return SiSoundcloud
+  if (p.includes('instagram') || i.includes('instagram')) return SiInstagram
+  if (p.includes('bandcamp') || i.includes('bandcamp')) return SiBandcamp
+  if (p.includes('mixcloud') || i.includes('mixcloud')) return SiMixcloud
+  if (p.includes('facebook') || i.includes('facebook')) return SiFacebook
+  if (p.includes('youtube') || i.includes('youtube')) return SiYoutube
+  if (p.includes('twitch') || i.includes('twitch')) return SiTwitch
+  if (p.includes('twitter') || p.includes(' x ') || i.includes('twitter') || i.includes(' x ')) return SiX
+
+  // Tier 2: Generic Link Icon (Lucide)
+  if (p.includes('link') || i.includes('link') || p.includes('website')) return Link2
+
+  // Tier 3: Absolute Fallback (Lucide)
+  return Share2
 }
 
 async function getConnectData() {
@@ -48,7 +62,7 @@ export async function ConnectSection() {
         
         <div className="flex flex-wrap justify-center gap-6">
           {data.socialLinks.map((link, index) => {
-            const IconComponent = (ICON_MAP[link.icon] || Link01Icon) as HugeiconType
+            const IconComponent = getPlatformIcon(link.platform, link.icon)
 
             return (
               <Link 
@@ -58,8 +72,7 @@ export async function ConnectSection() {
                 className="group relative p-4 bg-background rounded-md border border-border/50 hover:border-primary transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-primary/20"
                 aria-label={link.platform}
               >
-                <HugeiconsIcon 
-                  icon={IconComponent} 
+                <IconComponent 
                   className="w-8 h-8 text-foreground group-hover:text-primary transition-colors" 
                 />
               </Link>
