@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import { ChevronsDown } from 'lucide-react'
-import { client } from '@/sanity/lib/client'
+import { sanityFetch } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image'
+import { SITE_SETTINGS_QUERY } from '@/lib/queries'
 
 async function getHeroData() {
-  const query = `*[_type == "siteSettings"][0]{
-    artistName,
-    heroBackground
-  }`
-  return await client.fetch(query)
+  return await sanityFetch({
+    query: SITE_SETTINGS_QUERY,
+    tags: ['siteSettings']
+  })
 }
 
 export async function HeroSection() {
@@ -49,4 +49,3 @@ export async function HeroSection() {
     </section>
   )
 }
-

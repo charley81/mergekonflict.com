@@ -1,25 +1,21 @@
-# Current Feature: Seed Production Database
+# Current Feature: Refactor Data Fetching: Centralize Queries & Add Cache Tags
 
 ## Status
 Completed
 
 ## Goals
-- Update `scripts/seed-data.json` to match Sanity schema definitions. (Done)
-- Update Sanity schemas (`show`, `siteSettings`) to match `seed-data.json`. (Done)
-- Update frontend components to use new field names (`artistName`, `timeSlot`, `ticketUrl`). (Done)
-- Seed Sanity `development` and `production` datasets with initial content. (Done)
-- Add safety fallbacks for dynamic links to prevent `null` href errors. (Done)
+- Create `src/lib/queries.ts` and move all GROQ query strings there (Done)
+- Add `sanityFetch` helper to `src/sanity/lib/client.ts` (Done)
+- Update each section component to import queries and use `sanityFetch` with tags (Done)
+- Ensure tags match document types (`show`, `siteSettings`) (Done)
+- Verify build and revalidation (Done)
 
 ## Notes
-- Branch: `feature/seed-production-db`
-- Field renames: 
-  - `siteSettings.siteName` -> `artistName`
-  - `show.time` -> `timeSlot`
-  - `show.url` -> `ticketUrl`
-- Deleted old documents with outdated schemas from both datasets.
+- Centralized all GROQ queries into `src/lib/queries.ts`.
+- Implemented `sanityFetch` helper with support for Next.js cache tags and `revalidate: 0` for tag-based revalidation.
+- Updated all section components to use the new fetching pattern.
+- Verified build passes with zero errors.
 
 ## History
-- 2026-05-15: Initialized feature branch `feature/seed-production-db`.
-- 2026-05-15: Updated Sanity schemas and frontend components.
-- 2026-05-15: Seeded and published documents in `development` and `production` datasets.
-- 2026-05-15: Verified content and resolved `null` href prop-type errors.
+- 2026-05-15: Initialized feature branch `refactor/centralize-groq-queries`.
+- 2026-05-15: Centralized queries, implemented helper, and updated components. Fixed minor build issues and finalized caching strategy.

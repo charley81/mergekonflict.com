@@ -1,4 +1,4 @@
-import { client } from '@/sanity/lib/client'
+import { sanityFetch } from '@/sanity/lib/client'
 import { 
   SiSoundcloud, 
   SiInstagram, 
@@ -12,6 +12,7 @@ import {
 import { Link2, Share2 } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
+import { SITE_SETTINGS_QUERY } from '@/lib/queries'
 
 interface SocialLink {
   platform: string;
@@ -42,10 +43,10 @@ function getPlatformIcon(platform: string, iconName: string) {
 }
 
 async function getConnectData() {
-  const query = `*[_type == "siteSettings"][0]{
-    socialLinks
-  }`
-  return await client.fetch(query) as { socialLinks: SocialLink[] | null }
+  return await sanityFetch({
+    query: SITE_SETTINGS_QUERY,
+    tags: ['siteSettings']
+  }) as { socialLinks: SocialLink[] | null }
 }
 
 export async function ConnectSection() {

@@ -1,12 +1,13 @@
 import Image from 'next/image'
-import { client } from '@/sanity/lib/client'
+import { sanityFetch } from '@/sanity/lib/client'
 import { PortableText } from '@portabletext/react'
+import { SITE_SETTINGS_QUERY } from '@/lib/queries'
 
 async function getAboutData() {
-  const query = `*[_type == "siteSettings"][0]{
-    aboutBio
-  }`
-  return await client.fetch(query)
+  return await sanityFetch({
+    query: SITE_SETTINGS_QUERY,
+    tags: ['siteSettings']
+  })
 }
 
 export async function AboutSection() {
