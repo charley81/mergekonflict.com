@@ -44,6 +44,13 @@ export default defineType({
       type: 'url',
     }),
     defineField({
+      name: 'soundcloudPlaylistId',
+      title: 'SoundCloud Playlist ID (numeric)',
+      type: 'string',
+      description:
+        'Numeric playlist ID from the SoundCloud embed code. Used to construct the widget player URL.',
+    }),
+    defineField({
       name: 'soundcloudProfileUrl',
       title: 'SoundCloud Profile URL',
       type: 'url',

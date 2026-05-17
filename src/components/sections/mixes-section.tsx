@@ -4,6 +4,7 @@ import { SITE_SETTINGS_QUERY } from '@/lib/queries'
 
 interface MixesData {
   soundcloudPlaylistUrl?: string
+  soundcloudPlaylistId?: string
   soundcloudProfileUrl?: string
 }
 
@@ -28,6 +29,7 @@ export async function MixesSection() {
 
         <SoundCloudPlayer 
           playlistUrl={data.soundcloudPlaylistUrl} 
+          playlistId={data.soundcloudPlaylistId}
           profileUrl={data.soundcloudProfileUrl} 
         />
       </div>

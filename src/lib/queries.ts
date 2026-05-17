@@ -12,6 +12,7 @@ export const SITE_SETTINGS_QUERY = groq`*[_type == "siteSettings"][0]{
     icon
   },
   soundcloudPlaylistUrl,
+  soundcloudPlaylistId,
   soundcloudProfileUrl,
   footerCopyright
 }`
