@@ -1,22 +1,20 @@
-# Current Feature: SoundCloud Player — CMS-Driven Numeric Playlist ID
+# Current Feature: UI Polish V2
 
 ## Status
 Completed
 
 ## Goals
-- Add `soundcloudPlaylistId` field to `siteSettings` Sanity schema. (Done)
-- Update GROQ query in `src/lib/queries.ts` to include `soundcloudPlaylistId`. (Done)
-- Update `src/app/page.tsx` to pass `soundcloudPlaylistId` to `MixesSection`. (Note: MixesSection fetches its own data, so updated it directly) (Done)
-- Update `src/components/sections/mixes-section.tsx` to accept and pass the ID to `SoundCloudPlayer`. (Done)
-- Update `src/components/sections/soundcloud-player.tsx` to use the dynamic ID instead of the hardcoded one. (Done)
-- Update `src/hooks/use-soundcloud-widget.ts` to include `playlistId` in dependencies. (Done)
-- Verify build and functionality. (Done)
+- Fix Music Title Overflow on Mobile in `src/components/sections/soundcloud-player/track-display.tsx` (Done)
+- Add Space Between About Section Paragraphs in `src/components/sections/about-section.tsx` (Done)
+- Ensure `@tailwindcss/typography` is installed and configured (Done)
 
 ## Notes
-- Transitioned from a hardcoded numeric playlist ID to a CMS-controlled one.
-- Implemented a fallback ID (`2168797649`) in `SoundCloudPlayer` to ensure the player remains functional if the CMS field is empty.
-- Updated `useSoundCloudWidget` hook to re-initialize if the numeric ID changes.
+- Installed `@tailwindcss/typography` and added `@plugin` to `globals.css`.
+- Applied `prose prose-lg dark:prose-invert` to the About section bio.
+- Added `min-w-0 w-full` and `block` to the track display to ensure `truncate` works correctly in flex containers on mobile.
+- Build passed successfully.
 
 ## History
-- 2026-05-17: Initialized feature branch `feature/soundcloud-sanity-id`.
-- 2026-05-17: Completed implementation: updated schema, queries, components, and hooks. Verified successful build.
+- 2026-05-17: Initialized branch `fix/ui-polish-v2`.
+- 2026-05-17: Installed typography plugin and applied CSS fixes to About and SoundCloud player components.
+- 2026-05-17: Verified build and completed feature.

@@ -31,8 +31,8 @@ export function TrackDisplay({ currentTrack }: TrackDisplayProps) {
         </div>
       )}
       
-      <div className="flex-1 text-center md:text-left overflow-hidden">
-        <h3 className="text-xl font-bold text-foreground truncate uppercase tracking-tight">
+      <div className="flex-1 text-center md:text-left overflow-hidden min-w-0 w-full">
+        <h3 className="text-xl font-bold text-foreground truncate uppercase tracking-tight block w-full">
           {currentTrack?.title || 'Loading track...'}
         </h3>
         <p className="text-muted-foreground font-medium truncate">
