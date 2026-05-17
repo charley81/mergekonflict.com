@@ -36,15 +36,17 @@ export async function AboutSection() {
             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-8 text-foreground">
               About
             </h2>
-            <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+            <div className="prose prose-lg dark:prose-invert max-w-none">
               {data?.aboutBio ? (
                 <PortableText value={data.aboutBio as any} />
               ) : (
-                <p>
-                  Merge Konflict is a producer and DJ pushing the boundaries of dark techstep and amen-heavy drum and bass. 
-                  Known for clinical production and aggressive, high-energy sets, he has established himself as a 
-                  formidable force in the underground scene.
-                </p>
+                <div className="space-y-4">
+                  <p>
+                    Merge Konflict is a producer and DJ pushing the boundaries of dark techstep and amen-heavy drum and bass. 
+                    Known for clinical production and aggressive, high-energy sets, he has established himself as a 
+                    formidable force in the underground scene.
+                  </p>
+                </div>
               )}
             </div>
           </div>
