@@ -12,22 +12,35 @@ import { ProgressSlider } from './soundcloud-player/progress-slider'
 
 interface SoundCloudPlayerProps {
   playlistUrl: string
+  playlistId?: string
   profileUrl?: string
 }
 
-export default function SoundCloudPlayer({ playlistUrl, profileUrl }: SoundCloudPlayerProps) {
-  const { iframeRef, states, actions } = useSoundCloudWidget(playlistUrl)
-  const { isLoaded, isPlaying, currentTrack, progress, duration, error } = states
+export default function SoundCloudPlayer({
+  playlistUrl,
+  playlistId,
+  profileUrl,
+}: SoundCloudPlayerProps) {
+  const { iframeRef, states, actions } = useSoundCloudWidget(
+    playlistUrl,
+    playlistId,
+  )
+  const { isLoaded, isPlaying, currentTrack, progress, duration, error } =
+    states
 
   if (!playlistUrl) return null
 
-  const encodedPlaylistUrl = encodeURIComponent(playlistUrl)
-  const embedUrl = `https://w.soundcloud.com/player/?url=${encodedPlaylistUrl}&show_artwork=false&buying=false&sharing=false&download=false&show_playcount=false&show_user=false&visual=false`
+  // Fallback to the previous hardcoded ID if none provided in CMS
+  const PLAYLIST_NUMERIC_ID = playlistId || '2168797649'
+
+  const embedUrl = `https://w.soundcloud.com/player/?url=${encodeURIComponent(
+    `https://api.soundcloud.com/playlists/${PLAYLIST_NUMERIC_ID}`,
+  )}&show_artwork=false&buying=false&sharing=false&download=false&show_playcount=false&show_user=false`
 
   return (
     <div className="w-full max-w-2xl mx-auto space-y-8">
-      <Script 
-        src="https://w.soundcloud.com/player/api.js" 
+      <Script
+        src="https://w.soundcloud.com/player/api.js"
         strategy="afterInteractive"
         onLoad={() => {
           if (typeof window !== 'undefined' && window.onSCReady) {
@@ -35,18 +48,19 @@ export default function SoundCloudPlayer({ playlistUrl, profileUrl }: SoundCloud
           }
         }}
       />
-      
+
       <iframe
         ref={iframeRef}
         src={embedUrl}
         title="SoundCloud Widget"
-        style={{ 
-          position: 'absolute', 
-          clip: 'rect(0,0,0,0)', 
-          width: '1px', 
-          height: '1px', 
-          margin: '-1px', 
-          overflow: 'hidden' 
+        allow="autoplay; encrypted-media"
+        style={{
+          position: 'absolute',
+          clip: 'rect(0,0,0,0)',
+          width: '1px',
+          height: '1px',
+          margin: '-1px',
+          overflow: 'hidden',
         }}
         aria-hidden="true"
       />
@@ -57,7 +71,9 @@ export default function SoundCloudPlayer({ playlistUrl, profileUrl }: SoundCloud
             <p className="text-destructive font-medium">{error}</p>
             {profileUrl && (
               <Button asChild variant="outline">
-                <Link href={profileUrl} target="_blank">Listen on SoundCloud</Link>
+                <Link href={profileUrl} target="_blank">
+                  Listen on SoundCloud
+                </Link>
               </Button>
             )}
           </div>
@@ -67,16 +83,16 @@ export default function SoundCloudPlayer({ playlistUrl, profileUrl }: SoundCloud
           <>
             <TrackDisplay currentTrack={currentTrack} />
             <div className="space-y-4">
-              <ProgressSlider 
-                progress={progress} 
-                duration={duration} 
-                onSeek={actions.seek} 
+              <ProgressSlider
+                progress={progress}
+                duration={duration}
+                onSeek={actions.seek}
               />
-              <PlayerControls 
-                isPlaying={isPlaying} 
-                onToggle={actions.toggle} 
-                onPrev={actions.prev} 
-                onNext={actions.next} 
+              <PlayerControls
+                isPlaying={isPlaying}
+                onToggle={actions.toggle}
+                onPrev={actions.prev}
+                onNext={actions.next}
               />
             </div>
           </>
@@ -85,8 +101,16 @@ export default function SoundCloudPlayer({ playlistUrl, profileUrl }: SoundCloud
 
       {profileUrl && (
         <div className="flex justify-center">
-          <Button asChild variant="link" className="text-primary font-bold group">
-            <Link href={profileUrl} target="_blank" className="flex items-center gap-2">
+          <Button
+            asChild
+            variant="link"
+            className="text-primary font-bold group"
+          >
+            <Link
+              href={profileUrl}
+              target="_blank"
+              className="flex items-center gap-2"
+            >
               View All Mixes on SoundCloud
               <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>

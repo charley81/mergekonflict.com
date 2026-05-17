@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   images: {
@@ -13,6 +13,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-};
 
-export default nextConfig;
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Permissions-Policy',
+            value: 'encrypted-media=(self "https://w.soundcloud.com")',
+          },
+        ],
+      },
+    ]
+  },
+}
+
+export default nextConfig

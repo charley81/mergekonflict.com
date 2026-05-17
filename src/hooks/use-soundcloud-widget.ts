@@ -33,7 +33,7 @@ declare global {
   }
 }
 
-export function useSoundCloudWidget(playlistUrl: string) {
+export function useSoundCloudWidget(playlistUrl: string, playlistId?: string) {
   const iframeRef = useRef<HTMLIFrameElement>(null)
   const widgetRef = useRef<SoundCloudWidget | null>(null)
   
@@ -92,7 +92,7 @@ export function useSoundCloudWidget(playlistUrl: string) {
         Object.values(Events).forEach(event => widgetRef.current?.unbind(event))
       }
     }
-  }, [playlistUrl])
+  }, [playlistUrl, playlistId])
 
   const updateTrackInfo = (widget: SoundCloudWidget) => {
     widget.getCurrentSound((sound: TrackInfo) => {
