@@ -20,9 +20,9 @@ interface SocialLink {
 }
 
 // Three-tier icon resolver
-function getPlatformIcon(platform: string, iconName: string) {
-  const p = platform.toLowerCase()
-  const i = iconName.toLowerCase()
+function getPlatformIcon(platform: string = '', iconName: string = '') {
+  const p = (platform || '').toLowerCase()
+  const i = (iconName || '').toLowerCase()
 
   // Tier 1: Specific Brand Icons (Simple Icons)
   if (p.includes('soundcloud') || i.includes('soundcloud')) return SiSoundcloud

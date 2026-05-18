@@ -18,3 +18,4 @@ Completed
 ## History
 - 2026-05-18: Initialized branch `feature/about-image-full-flow` and started workflow.
 - 2026-05-18: Implemented schema, query, and component updates. Fixed type safety issues identified by code-scanner. Build successful.
+- 2026-05-18: Fixed a production prerender error caused by a null reference in `socialLinks.platform.toLowerCase()`.
