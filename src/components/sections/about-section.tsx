@@ -2,9 +2,11 @@ import Image from 'next/image'
 import { sanityFetch } from '@/sanity/lib/client'
 import { PortableText } from '@portabletext/react'
 import { SITE_SETTINGS_QUERY } from '@/lib/queries'
+import { type PortableTextBlock } from 'next-sanity'
 
 interface AboutData {
-  aboutBio: unknown[]
+  aboutBio: PortableTextBlock[]
+  aboutImageUrl: string | null
 }
 
 async function getAboutData() {
@@ -24,7 +26,7 @@ export async function AboutSection() {
           {/* Column 1: Image */}
           <div className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-2xl border border-border/50">
             <Image
-              src="/images/about.png"
+              src={data?.aboutImageUrl || "/images/about.png"}
               alt="Merge Konflict artist portrait"
               fill
               className="object-cover transition-transform duration-700 hover:scale-105"
@@ -38,7 +40,7 @@ export async function AboutSection() {
             </h2>
             <div className="prose prose-lg dark:prose-invert max-w-none">
               {data?.aboutBio ? (
-                <PortableText value={data.aboutBio as any} />
+                <PortableText value={data.aboutBio} />
               ) : (
                 <div className="space-y-4">
                   <p>
