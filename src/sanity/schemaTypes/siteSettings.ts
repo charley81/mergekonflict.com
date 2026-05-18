@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'siteSettings',
@@ -15,7 +15,8 @@ export default defineType({
       name: 'heroTitle',
       title: 'Hero Title',
       type: 'string',
-      description: 'The large text displayed in the hero section (e.g. "Merge")',
+      description:
+        'The large text displayed in the hero section (e.g. "Merge")',
       initialValue: 'Merge',
     }),
     defineField({
@@ -33,10 +34,16 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'aboutImage',
+      title: 'About Image',
+      type: 'image',
+      options: { hotspot: true },
+    }),
+    defineField({
       name: 'aboutBio',
       title: 'About Bio',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{ type: 'block' }],
     }),
     defineField({
       name: 'soundcloudPlaylistUrl',
@@ -63,9 +70,14 @@ export default defineType({
         {
           type: 'object',
           fields: [
-            {name: 'platform', type: 'string', title: 'Platform Name'},
-            {name: 'url', type: 'url', title: 'URL'},
-            {name: 'icon', type: 'string', title: 'Icon Name (Hugeicons)', description: 'e.g. InstagramIcon, SoundCloudIcon'},
+            { name: 'platform', type: 'string', title: 'Platform Name' },
+            { name: 'url', type: 'url', title: 'URL' },
+            {
+              name: 'icon',
+              type: 'string',
+              title: 'Icon Name (Hugeicons)',
+              description: 'e.g. InstagramIcon, SoundCloudIcon',
+            },
           ],
         },
       ],
